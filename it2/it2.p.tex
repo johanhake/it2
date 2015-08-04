@@ -1,0 +1,624 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/hplgit/doconce/)
+%%
+%%
+% #ifdef PTEX2TEX_EXPLANATION
+%%
+%% The file follows the ptex2tex extended LaTeX format, see
+%% ptex2tex: http://code.google.com/p/ptex2tex/
+%%
+%% Run
+%%      ptex2tex myfile
+%% or
+%%      doconce ptex2tex myfile
+%%
+%% to turn myfile.p.tex into an ordinary LaTeX file myfile.tex.
+%% (The ptex2tex program: http://code.google.com/p/ptex2tex)
+%% Many preprocess options can be added to ptex2tex or doconce ptex2tex
+%%
+%%      ptex2tex -DMINTED myfile
+%%      doconce ptex2tex myfile envir=minted
+%%
+%% ptex2tex will typeset code environments according to a global or local
+%% .ptex2tex.cfg configure file. doconce ptex2tex will typeset code
+%% according to options on the command line (just type doconce ptex2tex to
+%% see examples). If doconce ptex2tex has envir=minted, it enables the
+%% minted style without needing -DMINTED.
+% #endif
+
+% #define PREAMBLE
+
+% #ifdef PREAMBLE
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % or draft (marks overfull hboxes, figures with paths)
+10pt]{article}
+
+\listfiles               % print all files needed to compile this document
+
+\usepackage[a4paper]{geometry}
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts}
+\usepackage[table]{xcolor}
+\usepackage{bm,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+% Movies are handled by the href package
+\newenvironment{doconce:movie}{}{}
+\newcounter{doconce:movie:counter}
+
+
+\usepackage{ptex2tex}
+% #ifdef MINTED
+\usepackage{minted}
+\usemintedstyle{default}
+% #endif
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+% Set palatino as the default font family:
+\usepackage[sc]{mathpazo}    % Palatino fonts
+\linespread{1.05}            % Palatino needs extra line spread to look nice
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % number chapter, section, subsection
+
+% Tricks for having figures close to where they are defined:
+% 1. define less restrictive rules for where to put figures
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\floatpagefraction}{0.7}
+% 2. ensure all figures are flushed before next section
+\usepackage[section]{placeins}
+% 3. enable begin{figure}[H] (often leads to ugly pagebreaks)
+%\usepackage{float}\restylefloat{figure}
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+% --- begin definitions of admonition environments ---
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "notice" admon
+\colorlet{mdfbox_notice_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_notice_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_notice_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{notice_mdfboxmdframed}
+
+\newenvironment{notice_mdfboxadmon}[1][]{
+\begin{notice_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{notice_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "summary" admon
+\colorlet{mdfbox_summary_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_summary_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_summary_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{summary_mdfboxmdframed}
+
+\newenvironment{summary_mdfboxadmon}[1][]{
+\begin{summary_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{summary_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "warning" admon
+\colorlet{mdfbox_warning_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_warning_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_warning_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{warning_mdfboxmdframed}
+
+\newenvironment{warning_mdfboxadmon}[1][]{
+\begin{warning_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{warning_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "question" admon
+\colorlet{mdfbox_question_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_question_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_question_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{question_mdfboxmdframed}
+
+\newenvironment{question_mdfboxadmon}[1][]{
+\begin{question_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{question_mdfboxmdframed}
+}
+
+% Admonition style "mdfbox" is an oval colored box based on mdframed
+% "block" admon
+\colorlet{mdfbox_block_background}{gray!5}
+\newmdenv[
+  skipabove=15pt,
+  skipbelow=15pt,
+  outerlinewidth=0,
+  backgroundcolor=mdfbox_block_background,
+  linecolor=black,
+  linewidth=2pt,       % frame thickness
+  frametitlebackgroundcolor=mdfbox_block_background,
+  frametitlerule=true,
+  frametitlefont=\normalfont\bfseries,
+  shadow=false,        % frame shadow?
+  shadowsize=11pt,
+  leftmargin=0,
+  rightmargin=0,
+  roundcorner=5,
+  needspace=0pt,
+]{block_mdfboxmdframed}
+
+\newenvironment{block_mdfboxadmon}[1][]{
+\begin{block_mdfboxmdframed}[frametitle=#1]
+}
+{
+\end{block_mdfboxmdframed}
+}
+
+% --- end of definitions of admonition environments ---
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% endif for #ifdef PREAMBLE
+% #endif
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+Liten JavaScript kurs rettet mot IT2
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf Johan Hake${}^{}$ (\texttt{johan.hake@gmail.com})} \\ [0mm]
+\end{center}
+
+\begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+\begin{center} % date
+Aug 4, 2015
+\end{center}
+
+\vspace{1cm}
+
+
+% inline figure
+\centerline{\includegraphics[width=0.5\linewidth]{figures/javascript-seeklogo.pdf}}
+
+
+\pagebreak
+
+\section{Introduksjon}
+\label{section:introduksjon}
+
+Dette er en ressurs for elever og lærere som ønsker å bruke
+javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
+nettstedet/boka har betastatus, og innhold vil fylles på og endres
+fortløpende. Dokumentet er basert på en WordPress
+\href{{http://www.fuzzbin.org/IT2}}{\nolinkurl{version}} utarbeidet av Tom Jarle
+Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
+filmene. Et stort takk rettes derfor til Tom Jarle!
+
+Relevante kodeeksempler finnes på GitHub og jsBin.
+
+Nettstedet er bygget opp etter strukturen til kompetansemåla i faget,
+(se avsnitt:~\ref{section:kompetansemål}), og inneholder teori, oppgaver
+og videoer.
+
+Bli gjerne med i nettverket for lærere som er interessert i IT2 med
+javascript på \href{{https://www.facebook.com/groups/231993360276497}}{\nolinkurl{facebook}}.
+
+Johan Hake, August 2015
+
+% !split
+
+\pagebreak
+
+\section{Teori}
+
+Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
+kompetansemålene i faget:
+
+\begin{itemize}
+\item Multimedieutvikling, se avsnitt~\ref{section:teori:multimedieutvikling}
+
+\item Programmering, se avsnitt~\ref{section:teori:programmering}
+
+\item Planlegging og dokumentasjon, se avsnitt~\ref{section:teori:planlegging}
+\end{itemize}
+
+\noindent
+% !split
+
+\subsection{Multimedieutvikling}
+\label{section:teori:multimedieutvikling}
+
+% !split
+\subsection{Programmering}
+\label{section:teori:programmering}
+
+% !split
+\subsection{Planlegging og dokumentasjon}
+\label{section:teori:planlegging}
+
+% !split
+
+\section{Læreplan i informasjonsteknologi}
+
+Denne seksjonen er hentet fra \href{{http://www.udir.no/kl06/inf1-01/Hele}}{\nolinkurl{udir}}.
+
+\subsection{Formål}
+
+Informasjonsteknologien har hatt stor betydning for
+samfunnsutviklingen de siste tiårene. Teknologien har i løpet av kort
+tid endret kommunikasjonsmønsteret i samfunnet og skapt nye
+arbeidsplasser og lærings- og forskningsarenaer. Samfunnet har behov
+for mennesker som kan forstå, benytte og videreutvikle
+informasjonsteknologien, men samfunnet trenger også mennesker med en
+bevisst og kritisk holdning til hva teknologien gjør med mennesker og
+samfunn. Informasjonsteknologien gir muligheter for å lage helt nye
+produkter og tjenester gjennom kreativitet og samarbeid over
+faggrenser, og bidrar dermed til teknologisk innovasjon.
+
+Programfaget skal gi trening i kreativ tenkning og problemløsning og
+i å formulere presise beskrivelser og finne generelle
+mønstre. Programfaget skal bidra til å gi innsikt i hvordan
+informasjon i form av tall, tekster, bilder, grafikk, film, lyd og
+animasjoner kan struktureres og behandles automatisk som data, og
+hvilke krav det setter til datamaskiner og annet digitalt
+utstyr. Gjennom programfaget skal den enkelte få erfaring med bruk av
+moderne teknologi og relevante utviklingsverktøy, og hvordan
+sammensmelting av data-, lyd- og bildeteknologi kan gi rom for
+skapende bruk av teknologien.
+
+Opplæringen legger vekt på å konstruere IT-løsninger, og
+informasjonsteknologi er derfor på mange måter et praktisk fag. Det
+skal legges til rette for kommunikasjon og samarbeid i
+programfaget. Programfaget informasjonsteknologi er et realfag, men
+det har også sterke koblinger til mediefag, samfunnsfag, økonomi,
+språkfag og formgivingsfag. Programfaget kan derfor gi et godt
+grunnlag for studier innen ulike fagområder og for videreutvikling av
+kompetanse i yrkeslivet.
+
+\subsection{Grunnleggende ferdigheter}
+
+Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
+bidrar til utvikling av og er en del av fagkompetansen. I
+informasjonsteknologi forstås grunnleggende ferdigheter slik:
+
+
+\begin{block_mdfboxadmon}[]
+
+\textbf{Å kunne uttrykke seg muntlig og skriftlig} i informasjonsteknologi
+innebærer å planlegge og beskrive IT-løsninger, og utarbeide
+brukerveiledninger og dokumentasjon. Videre vil det si å formulere
+presise instruksjoner for datamaskiner i et programmeringsspråk. Det
+betyr også å uttrykke seg på en klar og presis måte.
+
+\textbf{Å kunne lese} i informasjonsteknologi innerærer å tolke beskrivelser,
+brukerveiledninger, diagrammer, modeller, symboler og programkode på
+en presis måte. Videre betyr det å forstå fagspesifikke tekster.
+
+\textbf{Å kunne regne} i informasjonsteknologi innebærer å gjøre enkle
+utregninger eller uttrykke formler i et programmeringsspråk. Videre
+vil det si å bruke enkel matematisk logikk for å uttrykke en
+betingelse på en presis måte.
+
+\textbf{Å kunne bruke digitale verktøy} utgjør en grunnstamme i
+informasjonsteknologi. Det innebærer å bruke IT-løsninger på en
+effektiv måte og bruke digitale verktøy både i planleggings- og
+dokumentasjonsprosesser.
+\end{block_mdfboxadmon}
+
+
+
+\subsection{Kompetansemål IT2}
+\label{section:kompetansemål}
+
+\paragraph{Planlegging og dokumentasjon.}
+Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
+disse etter gitte spesifikasjoner for å oppfylle brukernes
+behov. Videre dreier det seg om dokumentasjon og vurdering av
+IT-løsninger. Hovedområdet omfatter også utforming, dokumentasjon og
+vurdering av løsninger i forhold til retningslinjer for
+brukergrensesnitt.
+
+
+\begin{notice_mdfboxadmon}[Mål for opplæringen er at eleven skal kunne:]
+\begin{enumerate}
+\item spesifisere og begrunne funksjonelle krav til planlagte IT-løsninger 
+
+\item velge og bruke relevante teknikker og verktøy for planlegging og utvikling av IT-løsninger
+
+\item lage brukerveiledninger for IT-løsninger
+
+\item gjøre rede for hvordan IT-løsninger utvikles i samarbeid mellom personer, og hvilke krav det setter til planleggings- og utviklingsprosessen
+
+\item forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT-løsninger, med spesiell vekt på å dokumentere grensesnitt mellom ulike delsystemer
+\end{enumerate}
+
+\noindent
+\end{notice_mdfboxadmon}
+
+
+
+\paragraph{Programmering.}
+Hovedområdet handler om hvordan formelle språk kan brukes til å
+formulere strukturer og sette sammen instruksjoner som kan utføres av
+en datamaskin. Sentralt i hovedområdet er eksperimentering og
+problemløsning. I tillegg dreier det seg om objektorientering.
+
+
+\begin{notice_mdfboxadmon}[Mål for opplæringen er at eleven skal kunne:]
+\begin{enumerate}
+\item lese og bruke dokumentasjon og kode
+
+\item definere variabler og velge hensiktsmessige datatyper
+
+\item tilordne uttrykk til variabler
+
+\item programmere med enkle og indekserte variabler eller andre kolleksjoner av variabler
+
+\item programmere med valg og gjentakelser
+
+\item lage egne og bruke egne og andres funksjoner eller metoder med parametere
+
+\item programmere funksjoner eller metoder som blir aktivisert av hendelser
+
+\item utvikle og sette sammen delprogrammer
+
+\item teste og finne feil i programmer ved å bruke vanlige teknikker
+
+\item gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, objekt og arv
+\end{enumerate}
+
+\noindent
+\end{notice_mdfboxadmon}
+
+ 
+
+\paragraph{Multimedieutvikling.}
+Hovedområdet handler om utforming, strukturering, implementering og
+vurdering av multimedieapplikasjoner med tall, tekst, lyd, bilde,
+video og animasjoner. I tillegg omfatter hovedområdet både
+applikasjoner for lokal bruk og publisering over Internett.
+
+
+\begin{notice_mdfboxadmon}[Mål for opplæringen er at elevene skal kunne:]
+\begin{enumerate}
+\item planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner
+
+\item bruke programmeringsspråk i multimedieapplikasjoner
+
+\item vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner
+
+\item vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet
+\end{enumerate}
+
+\noindent
+\end{notice_mdfboxadmon}
+
+ 
+
+% !split
+
+% sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console
+
+\bjs
+var start_x = 80;
+var start_y = 70;
+var bredde = 60;
+var hojde = 240;
+
+rect(start_x, start_y, bredde, hojde);
+rect(start_x+3*bredde, start_y, bredde, hojde);
+rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var start_x = 80;
+var start_y = 70;
+var bredde = 60;
+var hojde = 240;
+
+ctx.rect(start_x, start_y, bredde, hojde);
+ctx.rect(start_x+3*bredde, start_y, bredde, hojde);
+ctx.rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
+ctx.stroke();
+
+
+
+\ejs
+
+
+\begin{notice_mdfboxadmon}[Kode eksempel:]
+\bhtml
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Leke med div">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+#minDiv{
+ text-align: center;
+	width: 200px;
+	height: 100px;
+	background-color: #aa5555;
+	border-color: brown;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px 40px;
+	box-shadow: 10px 10px 5px #888888;
+}
+</style>
+</head>
+<body>
+	<div id="minDiv"><h2>Jeg ligger i en div!</h2></div>
+
+
+<script id="jsbin-source-css" type="text/css">#minDiv{
+ text-align: center;
+	width: 200px;
+	height: 100px;
+	background-color: #aa5555;
+	border-color: brown;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px 40px;
+	box-shadow: 10px 10px 5px #888888;
+}</script>
+</body>
+</html>
+\ehtml
+\end{notice_mdfboxadmon}
+
+ 
+
+
+
+\begin{doconce:movie}
+\refstepcounter{doconce:movie:counter}
+\begin{center}
+\href{{http://www.youtube.com/embed/exjxJVQC3ms}}{\nolinkurl{http://www.youtube.com/embed/exjxJVQC3ms}}
+\end{center}
+
+\begin{center}  % movie caption
+Movie \arabic{doconce:movie:counter}: For løkker
+\end{center}
+\end{doconce:movie}
+
+
+% \href{{http://johanhake.github.io/js/js.do.txt}}{DocOnce source of this document}
+
+% ------------------- end of main content ---------------
+
+
+% #ifdef PREAMBLE
+\printindex
+
+\end{document}
+% #endif
+

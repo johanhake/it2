@@ -1,0 +1,255 @@
+TITLE: Liten JavaScript kurs rettet mot IT2
+AUTHOR: Johan Hake Email:johan.hake@gmail.com
+DATE: today
+
+
+FIGURE: [figures/javascript-seeklogo, frac=.50]
+\pagebreak
+
+======= Introduksjon =======
+label{section:introduksjon}
+
+Dette er en ressurs for elever og lærere som ønsker å bruke
+javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
+nettstedet/boka har betastatus, og innhold vil fylles på og endres
+fortløpende. Dokumentet er basert på en WordPress
+"`version`":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
+Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
+filmene. Et stort takk rettes derfor til Tom Jarle!
+
+Relevante kodeeksempler finnes på GitHub og jsBin.
+
+Nettstedet er bygget opp etter strukturen til kompetansemåla i faget,
+(se avsnitt: ref{section:kompetansemål}), og inneholder teori, oppgaver
+og videoer.
+
+Bli gjerne med i nettverket for lærere som er interessert i IT2 med
+javascript på "`facebook`":"https://www.facebook.com/groups/231993360276497".
+
+Johan Hake, August 2015
+
+!split
+
+\pagebreak
+
+======= Teori =======
+
+Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
+kompetansemålene i faget:
+
+* Multimedieutvikling, se avsnitt ref{section:teori:multimedieutvikling}
+* Programmering, se avsnitt ref{section:teori:programmering}
+* Planlegging og dokumentasjon, se avsnitt ref{section:teori:planlegging}
+
+!split
+
+===== Multimedieutvikling =====
+label{section:teori:multimedieutvikling}
+
+!split
+===== Programmering =====
+label{section:teori:programmering}
+
+!split
+===== Planlegging og dokumentasjon =====
+label{section:teori:planlegging}
+ 
+!split
+
+======= Læreplan i informasjonsteknologi =======
+
+Denne seksjonen er hentet fra "`udir`":"http://www.udir.no/kl06/inf1-01/Hele".
+
+===== Formål =====
+
+Informasjonsteknologien har hatt stor betydning for
+samfunnsutviklingen de siste tiårene. Teknologien har i løpet av kort
+tid endret kommunikasjonsmønsteret i samfunnet og skapt nye
+arbeidsplasser og lærings- og forskningsarenaer. Samfunnet har behov
+for mennesker som kan forstå, benytte og videreutvikle
+informasjonsteknologien, men samfunnet trenger også mennesker med en
+bevisst og kritisk holdning til hva teknologien gjør med mennesker og
+samfunn. Informasjonsteknologien gir muligheter for å lage helt nye
+produkter og tjenester gjennom kreativitet og samarbeid over
+faggrenser, og bidrar dermed til teknologisk innovasjon.
+
+Programfaget skal gi trening i kreativ tenkning og problemløsning og
+i å formulere presise beskrivelser og finne generelle
+mønstre. Programfaget skal bidra til å gi innsikt i hvordan
+informasjon i form av tall, tekster, bilder, grafikk, film, lyd og
+animasjoner kan struktureres og behandles automatisk som data, og
+hvilke krav det setter til datamaskiner og annet digitalt
+utstyr. Gjennom programfaget skal den enkelte få erfaring med bruk av
+moderne teknologi og relevante utviklingsverktøy, og hvordan
+sammensmelting av data-, lyd- og bildeteknologi kan gi rom for
+skapende bruk av teknologien.
+
+Opplæringen legger vekt på å konstruere IT-løsninger, og
+informasjonsteknologi er derfor på mange måter et praktisk fag. Det
+skal legges til rette for kommunikasjon og samarbeid i
+programfaget. Programfaget informasjonsteknologi er et realfag, men
+det har også sterke koblinger til mediefag, samfunnsfag, økonomi,
+språkfag og formgivingsfag. Programfaget kan derfor gi et godt
+grunnlag for studier innen ulike fagområder og for videreutvikling av
+kompetanse i yrkeslivet.
+
+===== Grunnleggende ferdigheter =====
+
+Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
+bidrar til utvikling av og er en del av fagkompetansen. I
+informasjonsteknologi forstås grunnleggende ferdigheter slik:
+
+!bblock 
+
+_Å kunne uttrykke seg muntlig og skriftlig_ i informasjonsteknologi
+innebærer å planlegge og beskrive IT-løsninger, og utarbeide
+brukerveiledninger og dokumentasjon. Videre vil det si å formulere
+presise instruksjoner for datamaskiner i et programmeringsspråk. Det
+betyr også å uttrykke seg på en klar og presis måte.
+
+_Å kunne lese_ i informasjonsteknologi innerærer å tolke beskrivelser,
+brukerveiledninger, diagrammer, modeller, symboler og programkode på
+en presis måte. Videre betyr det å forstå fagspesifikke tekster.
+
+_Å kunne regne_ i informasjonsteknologi innebærer å gjøre enkle
+utregninger eller uttrykke formler i et programmeringsspråk. Videre
+vil det si å bruke enkel matematisk logikk for å uttrykke en
+betingelse på en presis måte.
+
+_Å kunne bruke digitale verktøy_ utgjør en grunnstamme i
+informasjonsteknologi. Det innebærer å bruke IT-løsninger på en
+effektiv måte og bruke digitale verktøy både i planleggings- og
+dokumentasjonsprosesser.
+!eblock
+
+===== Kompetansemål IT2 =====
+label{section:kompetansemål}
+
+=== Planlegging og dokumentasjon ===
+
+Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
+disse etter gitte spesifikasjoner for å oppfylle brukernes
+behov. Videre dreier det seg om dokumentasjon og vurdering av
+IT-løsninger. Hovedområdet omfatter også utforming, dokumentasjon og
+vurdering av løsninger i forhold til retningslinjer for
+brukergrensesnitt.
+
+!bnotice Mål for opplæringen er at eleven skal kunne:
+o spesifisere og begrunne funksjonelle krav til planlagte IT-løsninger 
+o velge og bruke relevante teknikker og verktøy for planlegging og utvikling av IT-løsninger
+o lage brukerveiledninger for IT-løsninger
+o gjøre rede for hvordan IT-løsninger utvikles i samarbeid mellom personer, og hvilke krav det setter til planleggings- og utviklingsprosessen
+o forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT-løsninger, med spesiell vekt på å dokumentere grensesnitt mellom ulike delsystemer
+!enotice
+
+=== Programmering ===
+
+Hovedområdet handler om hvordan formelle språk kan brukes til å
+formulere strukturer og sette sammen instruksjoner som kan utføres av
+en datamaskin. Sentralt i hovedområdet er eksperimentering og
+problemløsning. I tillegg dreier det seg om objektorientering.
+
+!bnotice Mål for opplæringen er at eleven skal kunne:
+o lese og bruke dokumentasjon og kode
+o definere variabler og velge hensiktsmessige datatyper
+o tilordne uttrykk til variabler
+o programmere med enkle og indekserte variabler eller andre kolleksjoner av variabler
+o programmere med valg og gjentakelser
+o lage egne og bruke egne og andres funksjoner eller metoder med parametere
+o programmere funksjoner eller metoder som blir aktivisert av hendelser
+o utvikle og sette sammen delprogrammer
+o teste og finne feil i programmer ved å bruke vanlige teknikker
+o gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, objekt og arv
+!enotice 
+
+=== Multimedieutvikling ===
+
+Hovedområdet handler om utforming, strukturering, implementering og
+vurdering av multimedieapplikasjoner med tall, tekst, lyd, bilde,
+video og animasjoner. I tillegg omfatter hovedområdet både
+applikasjoner for lokal bruk og publisering over Internett.
+
+!bnotice Mål for opplæringen er at elevene skal kunne:
+o planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner
+o bruke programmeringsspråk i multimedieapplikasjoner
+o vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner
+o vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet
+!enotice 
+
+!split
+
+# sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console 
+
+!bc js
+var start_x = 80;
+var start_y = 70;
+var bredde = 60;
+var hojde = 240;
+
+rect(start_x, start_y, bredde, hojde);
+rect(start_x+3*bredde, start_y, bredde, hojde);
+rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+
+var start_x = 80;
+var start_y = 70;
+var bredde = 60;
+var hojde = 240;
+
+ctx.rect(start_x, start_y, bredde, hojde);
+ctx.rect(start_x+3*bredde, start_y, bredde, hojde);
+ctx.rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
+ctx.stroke();
+
+
+
+!ec
+
+!bnotice Kode eksempel:
+!bc html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="Leke med div">
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+#minDiv{
+ text-align: center;
+	width: 200px;
+	height: 100px;
+	background-color: #aa5555;
+	border-color: brown;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px 40px;
+	box-shadow: 10px 10px 5px #888888;
+}
+</style>
+</head>
+<body>
+	<div id="minDiv"><h2>Jeg ligger i en div!</h2></div>
+
+
+<script id="jsbin-source-css" type="text/css">#minDiv{
+ text-align: center;
+	width: 200px;
+	height: 100px;
+	background-color: #aa5555;
+	border-color: brown;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px 40px;
+	box-shadow: 10px 10px 5px #888888;
+}</script>
+</body>
+</html>
+!ec
+!enotice 
+
+
+MOVIE: [http://www.youtube.com/embed/exjxJVQC3ms] For løkker
+
+#"DocOnce source of this document": "http://johanhake.github.io/js/js.do.txt"
