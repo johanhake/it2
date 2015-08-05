@@ -68,7 +68,7 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2000.html#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
      <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
@@ -92,62 +92,54 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-
-
-
-<center><h1>Liten JavaScript kurs rettet mot IT2</h1></center>  <!-- document title -->
+<a name="part0006"></a>
+<!-- !split -->
 
 <p>
-<!-- author(s): Johan Hake -->
-
-<center>
-<b>Johan Hake</b>  (<tt>johan.hake at gmail.com</tt>)
-</center>
+<!-- sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console -->
 
 <p>
-<!-- institution(s) -->
+
+<!-- code=js (!bc js) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">var</span> start_x <span style="color: #666666">=</span> <span style="color: #666666">80</span>;
+<span style="color: #008000; font-weight: bold">var</span> start_y <span style="color: #666666">=</span> <span style="color: #666666">70</span>;
+<span style="color: #008000; font-weight: bold">var</span> bredde <span style="color: #666666">=</span> <span style="color: #666666">60</span>;
+<span style="color: #008000; font-weight: bold">var</span> hojde <span style="color: #666666">=</span> <span style="color: #666666">240</span>;
+
+rect(start_x, start_y, bredde, hojde);
+rect(start_x<span style="color: #666666">+3*</span>bredde, start_y, bredde, hojde);
+rect(start_x<span style="color: #666666">+</span>bredde, start_y<span style="color: #666666">+</span>(hojde<span style="color: #666666">-</span>bredde)<span style="color: #666666">/2</span>, <span style="color: #666666">2*</span>bredde, bredde);
+
+<span style="color: #008000; font-weight: bold">var</span> c<span style="color: #666666">=</span><span style="color: #008000">document</span>.getElementById(<span style="color: #BA2121">&quot;myCanvas&quot;</span>);
+<span style="color: #008000; font-weight: bold">var</span> ctx<span style="color: #666666">=</span>c.getContext(<span style="color: #BA2121">&quot;2d&quot;</span>);
+
+<span style="color: #008000; font-weight: bold">var</span> start_x <span style="color: #666666">=</span> <span style="color: #666666">80</span>;
+<span style="color: #008000; font-weight: bold">var</span> start_y <span style="color: #666666">=</span> <span style="color: #666666">70</span>;
+<span style="color: #008000; font-weight: bold">var</span> bredde <span style="color: #666666">=</span> <span style="color: #666666">60</span>;
+<span style="color: #008000; font-weight: bold">var</span> hojde <span style="color: #666666">=</span> <span style="color: #666666">240</span>;
+
+ctx.rect(start_x, start_y, bredde, hojde);
+ctx.rect(start_x<span style="color: #666666">+3*</span>bredde, start_y, bredde, hojde);
+ctx.rect(start_x<span style="color: #666666">+</span>bredde, start_y<span style="color: #666666">+</span>(hojde<span style="color: #666666">-</span>bredde)<span style="color: #666666">/2</span>, <span style="color: #666666">2*</span>bredde, bredde);
+ctx.stroke();
+</pre></div>
 <p>
-<center><h4>Aug 5, 2015</h4></center> <!-- date -->
-<p>
-<center><p><img src="figures/javascript-seeklogo.svg" align="bottom" width=300></p></center>
+<a class="jsbin-embed" href="http://jsbin.com/pabowo/3/embed?html,css,live">JS Bin demo</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 <p>
-<a href="it2.pdf" target="_self">PDF versjon av dette dokumentet (for printing)</a>
 
-<h1 id="section:introduksjon">Introduksjon</h1>
+<iframe width="640" height="365" src="http://www.youtube.com/embed/exjxJVQC3ms" frameborder="0" allowfullscreen></iframe>
 
-<p>
-Dette er en ressurs for elever og lærere som ønsker å bruke
-javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
-nettstedet/boka har betastatus, og innhold vil fylles på og endres
-fortløpende. Dokumentet er basert på en WordPress
-<a href="http://www.fuzzbin.org/IT2" target="_self"><tt>versjon</tt></a> utarbeidet av Tom Jarle
-Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
-filmene. Et stort takk rettes derfor til Tom Jarle!
+<p><em>For løkker</em></p>
 
 <p>
-Relevante kodeeksempler finnes på GitHub og jsBin.
+<!-- <a href="http://johanhake.github.io/js/js.do.txt" target="_self">DocOnce source of this document</a> -->
 
-<p>
-Nettstedet er bygget opp etter strukturen til kompetansemåla i faget,
-(se avsnitt: <a href="part_it2005.html#section:kompetansemål">Kompetansemål IT2</a>), og inneholder teori, oppgaver
-og videoer.
-
-<p>
-Bli gjerne med i nettverket for lærere som er interessert i IT2 med
-javascript på <a href="https://www.facebook.com/groups/231993360276497" target="_self"><tt>facebook</tt></a>.
-
-<p>
-Johan Hake, August 2015
-
-<p>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
-  <li class="next">
-    <a href="part_it2001.html">Next &rarr;</a>
+  <li class="previous">
+    <a href="part_it2005.html">&larr; Prev</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->

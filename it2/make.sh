@@ -1,8 +1,8 @@
 DOCNAM=it2
 TEXDOC=$DOCNAM.tex
 BOOTWATCHSTYLE=journal # Check out https://bootswatch.com
-doconce format html $DOCNAM --html_style=bootswatch_$BOOTWATCHSTYLE --html_admon=bootstrap_panel --html_bootstrap_jumbotron=on --html_bootstrap_navbar=on --encoding=utf-8
-doconce split_html $DOCNAM #--html_style=bootswatch_$BOOTWATCHSTYLE --html_bootstrap_jumbotron=off --html_bootstrap_navbar=on  --encoding=utf-8# --html_admon_shadow gray --html_admon_bg_color=F3F781
+doconce format html $DOCNAM --html_style=bootswatch_$BOOTWATCHSTYLE --html_admon=bootstrap_panel --html_bootstrap_jumbotron=off --html_bootstrap_navbar=on --encoding=utf-8
+doconce split_html $DOCNAM
 doconce format pdflatex $DOCNAM --encoding=utf-8 --latex_admon=mdfbox --latex_font=palatino --latex_papersize=a4 --latex_admon_title_no_period
 doconce ptex2tex $DOCNAM envir=minted 
 doconce replace 'linecolor=black,' 'linecolor=blue!80!black!20,' $TEXDOC

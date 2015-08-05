@@ -13,7 +13,7 @@ Dette er en ressurs for elever og lærere som ønsker å bruke
 javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
 nettstedet/boka har betastatus, og innhold vil fylles på og endres
 fortløpende. Dokumentet er basert på en WordPress
-"`version`":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
+"`versjon`":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
 Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
 filmene. Et stort takk rettes derfor til Tom Jarle!
 
