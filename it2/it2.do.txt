@@ -401,7 +401,7 @@ Når en webside lastes skaper nettleseren en Document Object Model
 figur ref{figure:domtree}. DOM er en W3C standard, som definerer
 metoder for å få tilgang på og endre et HTML (eller XML) dokument.
 
-FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter label{figure:domtree} 
+FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www.w3schools.com`":"http://www.w3schools.com/js/js_htmldom.asp"). label{figure:domtree} 
 
 #When a web page is loaded, the browser creates a Document Object Model
 #of the page.  The HTML DOM model is constructed as a tree of Objects:
