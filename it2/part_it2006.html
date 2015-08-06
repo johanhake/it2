@@ -17,19 +17,26 @@ Automatically generated HTML file from DocOnce source
 -->
 
 
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 1,
- 'sections': [(u'Introduksjon',
-               1,
-               u'section:introduksjon',
-               u'section:introduksjon'),
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
               (u'Teori', 1, None, '___sec1'),
               (u'Multimedieutvikling',
                2,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
               (u'Programmering',
                2,
                u'section:teori:programmering',
@@ -38,16 +45,16 @@ Automatically generated HTML file from DocOnce source
                2,
                u'section:teori:planlegging',
                u'section:teori:planlegging'),
-              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec5'),
-              (u'Form\xe5l', 2, None, '___sec6'),
-              (u'Grunnleggende ferdigheter', 2, None, '___sec7'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
               (u'Kompetansem\xe5l IT2',
                2,
                u'section:kompetansem\xe5l',
                u'section:kompetansem\xe5l'),
-              (u'Planlegging og dokumentasjon', 3, None, '___sec9'),
-              (u'Programmering', 3, None, '___sec10'),
-              (u'Multimedieutvikling', 3, None, '___sec11')]}
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -68,18 +75,21 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="part_it2000.html#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2000.html#section:forord" style="font-size: 80%;"><b>Forord</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec5" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:editorogfilbehandling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor og filbehandling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:html" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:css" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2005.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec8" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
 
         </ul>
       </li>
@@ -95,51 +105,17 @@ end of tocinfo -->
 <a name="part0006"></a>
 <!-- !split -->
 
-<p>
-<!-- sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console -->
+<h2 id="section:teori:planlegging">Planlegging og dokumentasjon</h2>
 
 <p>
-
-<!-- code=js (!bc js) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #008000; font-weight: bold">var</span> start_x <span style="color: #666666">=</span> <span style="color: #666666">80</span>;
-<span style="color: #008000; font-weight: bold">var</span> start_y <span style="color: #666666">=</span> <span style="color: #666666">70</span>;
-<span style="color: #008000; font-weight: bold">var</span> bredde <span style="color: #666666">=</span> <span style="color: #666666">60</span>;
-<span style="color: #008000; font-weight: bold">var</span> hojde <span style="color: #666666">=</span> <span style="color: #666666">240</span>;
-
-rect(start_x, start_y, bredde, hojde);
-rect(start_x<span style="color: #666666">+3*</span>bredde, start_y, bredde, hojde);
-rect(start_x<span style="color: #666666">+</span>bredde, start_y<span style="color: #666666">+</span>(hojde<span style="color: #666666">-</span>bredde)<span style="color: #666666">/2</span>, <span style="color: #666666">2*</span>bredde, bredde);
-
-<span style="color: #008000; font-weight: bold">var</span> c<span style="color: #666666">=</span><span style="color: #008000">document</span>.getElementById(<span style="color: #BA2121">&quot;myCanvas&quot;</span>);
-<span style="color: #008000; font-weight: bold">var</span> ctx<span style="color: #666666">=</span>c.getContext(<span style="color: #BA2121">&quot;2d&quot;</span>);
-
-<span style="color: #008000; font-weight: bold">var</span> start_x <span style="color: #666666">=</span> <span style="color: #666666">80</span>;
-<span style="color: #008000; font-weight: bold">var</span> start_y <span style="color: #666666">=</span> <span style="color: #666666">70</span>;
-<span style="color: #008000; font-weight: bold">var</span> bredde <span style="color: #666666">=</span> <span style="color: #666666">60</span>;
-<span style="color: #008000; font-weight: bold">var</span> hojde <span style="color: #666666">=</span> <span style="color: #666666">240</span>;
-
-ctx.rect(start_x, start_y, bredde, hojde);
-ctx.rect(start_x<span style="color: #666666">+3*</span>bredde, start_y, bredde, hojde);
-ctx.rect(start_x<span style="color: #666666">+</span>bredde, start_y<span style="color: #666666">+</span>(hojde<span style="color: #666666">-</span>bredde)<span style="color: #666666">/2</span>, <span style="color: #666666">2*</span>bredde, bredde);
-ctx.stroke();
-</pre></div>
-<p>
-<a class="jsbin-embed" href="http://jsbin.com/pabowo/3/embed?html,css,live">JS Bin demo</a><script src="http://static.jsbin.com/js/embed.js"></script>
-
-<p>
-
-<iframe width="640" height="365" src="http://www.youtube.com/embed/exjxJVQC3ms" frameborder="0" allowfullscreen></iframe>
-
-<p><em>For løkker</em></p>
-
-<p>
-<!-- <a href="http://johanhake.github.io/js/js.do.txt" target="_self">DocOnce source of this document</a> -->
-
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
   <li class="previous">
     <a href="part_it2005.html">&larr; Prev</a>
+  </li>
+  <li class="next">
+    <a href="part_it2007.html">Next &rarr;</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->

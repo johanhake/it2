@@ -1,0 +1,245 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Liten JavaScript kurs rettet mot IT2">
+
+<title>Liten JavaScript kurs rettet mot IT2</title>
+
+
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<style type="text/css">
+/* solarized style */
+body {
+  margin:5;
+  padding:0;
+  border:0; /* Remove the border around the viewport in old versions of IE */
+  width:100%;
+  background: #fdf6e3;
+  min-width:600px;	/* Minimum width of layout - remove if not required */
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 1.0em;
+  line-height: 1.3em;
+  color: #657b83;
+}
+a { color: #859900; text-decoration: underline; }
+a:hover, a:active { outline:none }
+a, a:active, a:visited { color: #859900; }
+a:hover { color: #268bd2; }
+h1, h2, h3 { margin:.8em 0 .2em 0; padding:0; line-height: 125%; }
+h2 { font-variant: small-caps; }
+tt, code { font-family: monospace, sans-serif; box-shadow: none; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; }
+p { text-indent: 0px; }
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa; }
+.alert-text-small   { font-size: 80%;  }
+.alert-text-large   { font-size: 130%; }
+.alert-text-normal  { font-size: 90%;  }
+.alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:1px solid #93a1a1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #555;
+  background-color: #eee8d5;
+  background-position: 10px 5px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 55px;
+  width: 75%;
+ }
+.alert-block {padding-top:14px; padding-bottom:14px}
+.alert-block > p, .alert-block > ul {margin-bottom:1em}
+.alert li {margin-top: 1em}
+.alert-block p+p {margin-top:5px}
+.alert-notice { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_notice.png); }
+.alert-summary  { background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_summary.png); }
+.alert-warning { background-image: url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_warning.png); }
+.alert-question {background-image:url(https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_images/small_yellow_question.png); }
+
+div { text-align: justify; text-justify: inter-word; }
+</style>
+
+
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<!-- tocinfo
+{'highest level': 1,
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
+              (u'Teori', 1, None, '___sec1'),
+              (u'Multimedieutvikling',
+               2,
+               u'section:teori:multimedieutvikling',
+               u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
+              (u'Programmering',
+               2,
+               u'section:teori:programmering',
+               u'section:teori:programmering'),
+              (u'Planlegging og dokumentasjon',
+               2,
+               u'section:teori:planlegging',
+               u'section:teori:planlegging'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
+              (u'Kompetansem\xe5l IT2',
+               2,
+               u'section:kompetansem\xe5l',
+               u'section:kompetansem\xe5l'),
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
+end of tocinfo -->
+
+<body>
+
+    
+<a name="part0002"></a>
+<p>
+<!-- begin top navigation -->
+<table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="part_it2-solarized001.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/prev1.png" border=0 alt="&laquo; Previous"></a></div>
+</td><td>
+<div style="text-align: right;"><a href="part_it2-solarized003.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/next1.png" border=0 alt="Next &raquo;"></a></div>
+</td></tr></table>
+<!-- end top navigation -->
+</p>
+
+<p>
+<!-- !split -->
+
+<h2 id="section:teori:multimedieutvikling">Multimedieutvikling</h2>
+
+<h3 id="section:teori:editorogfilbehandling">Editor og filbehandling</h3>
+
+<p>
+Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
+gjøre. Dette gjelder også når vi skal programmere. I denne boka
+skal vi benytte oss av to typer verktøy.
+
+<p>
+
+<dl>
+<dt>Nettleser:<dd> 
+  Program der koden kjøres og skjermbildet vises
+<dt>Editor:<dd> 
+  Her skrives og editeres programkoden 
+</dl>
+
+<b>Nettlesere.</b>
+
+<p>
+De fleste moderne nettlesere fungerer veldig bra som støtteverktøy
+til programmering. De har de funksjoner og verktøy som trengs for å
+jobbe med HTML-programmering på en effektiv og god måte. De mest
+brukte nettleserne i dag er Chrome, FireFox, Internet Explorer, Opera
+og Safari.
+
+<p>
+<b>Editor.</b>
+
+<p>
+Det finnes veldig mange gode editorer for programmering. De mest
+avanserte er store programmeringsmijø, eller
+<a href="http://en.wikipedia.org/wiki/Integrated_development_environment" target="_self"><tt>IDE'er</tt></a>
+som de også kalles. I dette kurset kommer vi langt med noe enklere
+editorer, som allikevel er veldig kraftige og funksjonsrike.
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 1:  Et lite ekesmpel på hvordan et enkelt HTML-dokument kan se ut. </p></center>
+<p><img src="figures/editor_sublime_eksempel.png" align="bottom" ></p>
+</center>
+
+<p>
+Til dette kurset anbefaler jeg at dere bruker
+<a href="https://notepad-plus-plus.org" target="_self"><tt>notepad++</tt></a> eller <a href="http://www.sublimetext.com/2" target="_self"><tt>Sublime
+Text</tt></a> 2. Disse er enkle, men allikevel
+kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
+flere filer samtidig. De har også god støtte for automatiske
+kodeforslag og fargelegging av kode slik at lesing går lettere.
+
+<p>
+<b>Før vi lager vårt første html-side.</b>
+
+<p>
+Nå er vi straks klare til å sette i gang med det som er gøy, men
+før det må vi ha noen få ting på plass...
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Før vi lager vårt første html-side må vi...</b>
+<p>
+
+<ol>
+<li> Lag en mappe som skal inneholde filene du lager. (Hvert program skal ha sin egen mappe).</li>
+<li> Lag et nytt html-dokument som inneholder koden under. (Se under for startkoder).</li>
+</ol>
+</div>
+
+
+<p>
+<b>Example: Kom igang med editorn.</b>
+<div id="example:komigang"></div>
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Programkoden som du kan bruke i et HTML-dokument for å komme i gang.</b>
+<p>
+<!-- begin verbatim block  html-->
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;nb&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Mitt foerste HTML-dokument&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Dette er en overskrift.&lt;/h1&gt; 
+	&lt;p&gt;Dette er en paragraf, og denne teksten ser litt 
+    annerledes ut enn en overskrift&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
+<p>
+<!-- begin bottom navigation -->
+<table style="width: 100%"><tr><td>
+<div style="text-align: left;"><a href="part_it2-solarized001.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/prev1.png" border=0 alt="&laquo; Previous"></a></div>
+</td><td>
+<div style="text-align: right;"><a href="part_it2-solarized003.html"><img src="http://hplgit.github.io/doconce/bundled/html_images/next1.png" border=0 alt="Next &raquo;"></a></div>
+</td></tr></table>
+<!-- end bottom navigation -->
+</p>
+
+<!-- ------------------- end of main content --------------- -->
+
+
+</body>
+</html>
+    
+

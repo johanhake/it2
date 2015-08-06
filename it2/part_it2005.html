@@ -17,19 +17,26 @@ Automatically generated HTML file from DocOnce source
 -->
 
 
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 1,
- 'sections': [(u'Introduksjon',
-               1,
-               u'section:introduksjon',
-               u'section:introduksjon'),
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
               (u'Teori', 1, None, '___sec1'),
               (u'Multimedieutvikling',
                2,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
               (u'Programmering',
                2,
                u'section:teori:programmering',
@@ -38,16 +45,16 @@ Automatically generated HTML file from DocOnce source
                2,
                u'section:teori:planlegging',
                u'section:teori:planlegging'),
-              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec5'),
-              (u'Form\xe5l', 2, None, '___sec6'),
-              (u'Grunnleggende ferdigheter', 2, None, '___sec7'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
               (u'Kompetansem\xe5l IT2',
                2,
                u'section:kompetansem\xe5l',
                u'section:kompetansem\xe5l'),
-              (u'Planlegging og dokumentasjon', 3, None, '___sec9'),
-              (u'Programmering', 3, None, '___sec10'),
-              (u'Multimedieutvikling', 3, None, '___sec11')]}
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -68,18 +75,21 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="part_it2000.html#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2000.html#section:forord" style="font-size: 80%;"><b>Forord</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec5" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
-     <!-- navigation toc: --> <li><a href="#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:editorogfilbehandling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor og filbehandling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:html" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:css" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+     <!-- navigation toc: --> <li><a href="#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2006.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec8" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
 
         </ul>
       </li>
@@ -95,170 +105,7 @@ end of tocinfo -->
 <a name="part0005"></a>
 <!-- !split -->
 
-<h1 id="___sec5">Læreplan i informasjonsteknologi </h1>
-
-<p>
-Denne seksjonen er hentet fra <a href="http://www.udir.no/kl06/inf1-01/Hele" target="_self"><tt>udir</tt></a>.
-
-<h2 id="___sec6">Formål </h2>
-
-<p>
-Informasjonsteknologien har hatt stor betydning for
-samfunnsutviklingen de siste tiårene. Teknologien har i løpet av kort
-tid endret kommunikasjonsmønsteret i samfunnet og skapt nye
-arbeidsplasser og lærings- og forskningsarenaer. Samfunnet har behov
-for mennesker som kan forstå, benytte og videreutvikle
-informasjonsteknologien, men samfunnet trenger også mennesker med en
-bevisst og kritisk holdning til hva teknologien gjør med mennesker og
-samfunn. Informasjonsteknologien gir muligheter for å lage helt nye
-produkter og tjenester gjennom kreativitet og samarbeid over
-faggrenser, og bidrar dermed til teknologisk innovasjon.
-
-<p>
-Programfaget skal gi trening i kreativ tenkning og problemløsning og
-i å formulere presise beskrivelser og finne generelle
-mønstre. Programfaget skal bidra til å gi innsikt i hvordan
-informasjon i form av tall, tekster, bilder, grafikk, film, lyd og
-animasjoner kan struktureres og behandles automatisk som data, og
-hvilke krav det setter til datamaskiner og annet digitalt
-utstyr. Gjennom programfaget skal den enkelte få erfaring med bruk av
-moderne teknologi og relevante utviklingsverktøy, og hvordan
-sammensmelting av data-, lyd- og bildeteknologi kan gi rom for
-skapende bruk av teknologien.
-
-<p>
-Opplæringen legger vekt på å konstruere IT-løsninger, og
-informasjonsteknologi er derfor på mange måter et praktisk fag. Det
-skal legges til rette for kommunikasjon og samarbeid i
-programfaget. Programfaget informasjonsteknologi er et realfag, men
-det har også sterke koblinger til mediefag, samfunnsfag, økonomi,
-språkfag og formgivingsfag. Programfaget kan derfor gi et godt
-grunnlag for studier innen ulike fagområder og for videreutvikling av
-kompetanse i yrkeslivet.
-
-<h2 id="___sec7">Grunnleggende ferdigheter </h2>
-
-<p>
-Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
-bidrar til utvikling av og er en del av fagkompetansen. I
-informasjonsteknologi forstås grunnleggende ferdigheter slik:
-
-<p>
-<div class="panel panel-default">
-<div class="panel-body">
-
-<p>
-<b>Å kunne uttrykke seg muntlig og skriftlig</b> i informasjonsteknologi
-innebærer å planlegge og beskrive IT-løsninger, og utarbeide
-brukerveiledninger og dokumentasjon. Videre vil det si å formulere
-presise instruksjoner for datamaskiner i et programmeringsspråk. Det
-betyr også å uttrykke seg på en klar og presis måte.
-
-<p>
-<b>Å kunne lese</b> i informasjonsteknologi innerærer å tolke beskrivelser,
-brukerveiledninger, diagrammer, modeller, symboler og programkode på
-en presis måte. Videre betyr det å forstå fagspesifikke tekster.
-
-<p>
-<b>Å kunne regne</b> i informasjonsteknologi innebærer å gjøre enkle
-utregninger eller uttrykke formler i et programmeringsspråk. Videre
-vil det si å bruke enkel matematisk logikk for å uttrykke en
-betingelse på en presis måte.
-
-<p>
-<b>Å kunne bruke digitale verktøy</b> utgjør en grunnstamme i
-informasjonsteknologi. Det innebærer å bruke IT-løsninger på en
-effektiv måte og bruke digitale verktøy både i planleggings- og
-dokumentasjonsprosesser.
-</div>
-</div>
-
-
-<h2 id="section:kompetansemål">Kompetansemål IT2</h2>
-
-<h3 id="___sec9">Planlegging og dokumentasjon </h3>
-
-<p>
-Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
-disse etter gitte spesifikasjoner for å oppfylle brukernes
-behov. Videre dreier det seg om dokumentasjon og vurdering av
-IT-løsninger. Hovedområdet omfatter også utforming, dokumentasjon og
-vurdering av løsninger i forhold til retningslinjer for
-brukergrensesnitt.
-
-<p>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-  <h3 class="panel-title">Mål for opplæringen er at eleven skal kunne:</h3>
-  </div>
-<div class="panel-body">
-
-<ol>
-<li> spesifisere og begrunne funksjonelle krav til planlagte IT-løsninger</li> 
-<li> velge og bruke relevante teknikker og verktøy for planlegging og utvikling av IT-løsninger</li>
-<li> lage brukerveiledninger for IT-løsninger</li>
-<li> gjøre rede for hvordan IT-løsninger utvikles i samarbeid mellom personer, og hvilke krav det setter til planleggings- og utviklingsprosessen</li>
-<li> forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT-løsninger, med spesiell vekt på å dokumentere grensesnitt mellom ulike delsystemer</li>
-</ol>
-</div>
-</div>
-
-
-<h3 id="___sec10">Programmering </h3>
-
-<p>
-Hovedområdet handler om hvordan formelle språk kan brukes til å
-formulere strukturer og sette sammen instruksjoner som kan utføres av
-en datamaskin. Sentralt i hovedområdet er eksperimentering og
-problemløsning. I tillegg dreier det seg om objektorientering.
-
-<p>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-  <h3 class="panel-title">Mål for opplæringen er at eleven skal kunne:</h3>
-  </div>
-<div class="panel-body">
-
-<ol>
-<li> lese og bruke dokumentasjon og kode</li>
-<li> definere variabler og velge hensiktsmessige datatyper</li>
-<li> tilordne uttrykk til variabler</li>
-<li> programmere med enkle og indekserte variabler eller andre kolleksjoner av variabler</li>
-<li> programmere med valg og gjentakelser</li>
-<li> lage egne og bruke egne og andres funksjoner eller metoder med parametere</li>
-<li> programmere funksjoner eller metoder som blir aktivisert av hendelser</li>
-<li> utvikle og sette sammen delprogrammer</li>
-<li> teste og finne feil i programmer ved å bruke vanlige teknikker</li>
-<li> gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, objekt og arv</li>
-</ol>
-</div>
-</div>
-
-
-<h3 id="___sec11">Multimedieutvikling </h3>
-
-<p>
-Hovedområdet handler om utforming, strukturering, implementering og
-vurdering av multimedieapplikasjoner med tall, tekst, lyd, bilde,
-video og animasjoner. I tillegg omfatter hovedområdet både
-applikasjoner for lokal bruk og publisering over Internett.
-
-<p>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-  <h3 class="panel-title">Mål for opplæringen er at elevene skal kunne:</h3>
-  </div>
-<div class="panel-body">
-
-<ol>
-<li> planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner</li>
-<li> bruke programmeringsspråk i multimedieapplikasjoner</li>
-<li> vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner</li>
-<li> vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet</li>
-</ol>
-</div>
-</div>
-
+<h2 id="section:teori:programmering">Programmering</h2>
 
 <p>
 <p>

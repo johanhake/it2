@@ -1,13 +1,110 @@
+# -*- coding: utf-8 -*-
 TITLE: Liten JavaScript kurs rettet mot IT2
 AUTHOR: Johan Hake Email:johan.hake@gmail.com
 DATE: today
 
 
-FIGURE: [figures/javascript-seeklogo, frac=.50]
+<%
+
+# simple hack to get around the limited table possibilities in doconce
+
+latex_formats = {"code":r"\texttt{%s}",
+                 "strong":r"\textbf{%s}",
+                 "emph":r"\textit{%s}",
+                 None:r"%s"}
+
+html_formats = {"code":r"<xmp>%s</xmp>",
+                "strong":r"<strong>%s</strong>",
+                "emph":r"<em>%s</em>",
+                None:r"%s"}
+
+
+def tableify(format_, row_contents, col_postions, col_formats):
+
+    if format_ in ["html", "mediawiki"]:
+        return html_table(row_contents, col_postions, col_formats)
+    elif format_ in ["latex", "pdflatex"]:
+        return latex_table(row_contents, col_postions, col_formats)
+    
+def latex_table(row_contents, col_postions, col_formats):
+    
+    # add macro for multi line cells
+    table_lines = []
+    table_lines.append(r"\providecommand{\specialcell}[2][c]{\begin{tabular}[c]{@{}#1@{}}#2\end{tabular}}")
+    table_lines.append(r"{\footnotesize\renewcommand{\arraystretch}{1.2}")
+    table_lines.append(r"\vspace{2em}")
+    table_lines.append(r"\begin{tabular}{%s}" % col_positions)
+    table_lines.append(r"\hline")
+    N_rows = len(row_contents)
+    col_positions_stripped = "".join(col_postions.split("|"))
+    N_cols = len(col_positions_stripped)
+
+    for i, row in enumerate(row_contents):
+        line = []
+        for j, cell in enumerate(row):
+            cell_format = latex_formats[col_formats.get(j)] if i != 0 else latex_formats["strong"]
+            col_position = col_positions_stripped[j]
+            if r"\\" in cell:
+                cell = r"\\".join(cell_format % cell_line for cell_line in cell.split(r"\\"))
+                line.append(r"\specialcell[%s]{%s}" % (col_position, cell))
+            else:
+                line.append(cell_format % cell)
+        table_lines.append(r" & ".join(line)+r"\\")
+        table_lines.append(r"\hline")
+
+    table_lines.append(r"\end{tabular}")
+    table_lines.append(r"}\renewcommand{\arraystretch}{1.0}")
+    table_lines.append(r"\\")
+    return "\n".join(table_lines)+"\n"
+    
+    with open(".latex_table_file_%d.do.txt" % table_cnt, "w") as f:
+        f.write("\n".join(table_lines)+"\n")
+    table_cnt += 1
+    return table_cnt
+
+def html_table(row_contents, col_postions, col_formats):
+
+    table_lines = ["<p><table class=\"table table-stripped\">"]
+    N_rows = len(row_contents)
+    
+    for i, row in enumerate(row_contents):
+        line = []
+        row_cell_format = r"<td>%s</td>" if i else r"<th>%s</th>"
+        if i == 0:
+            table_lines.append(r"<thead>")
+        for j, cell in enumerate(row):
+            cell_format = html_formats[col_formats.get(j)] if i != 0 else html_formats[None]
+            if r"\\" in cell:
+                cell = cell_format % cell.replace(r"\\", "\n")
+                line.append(cell)
+            else:
+                line.append(cell_format % cell)
+        table_lines.append(r"<tr>%s</tr>" % (r" ".join(row_cell_format % cell for cell in line)))
+        if i == 0:
+            table_lines.extend([r"</thead>", r"<tbody>"])
+        elif i == N_rows-1:
+            table_lines.append(r"</tbody>")
+        
+    table_lines.append(r"</table></p>")
+    return "\n".join(table_lines)+"\n"
+
+    with open(".html_table_file_%d.do.txt" % table_cnt, "w") as f:
+        f.write("\n".join(table_lines)+"\n")
+    table_cnt += 1
+    return table_cnt
+
+
+%>
+
+# sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console 
+
+FIGURE: [figures/javascript-seeklogo,frac=0.50]
+
+
 \pagebreak
 
-======= Introduksjon =======
-label{section:introduksjon}
+======= Forord =======
+label{section:forord}
 
 Dette er en ressurs for elever og lærere som ønsker å bruke
 javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
@@ -17,16 +114,29 @@ fortløpende. Dokumentet er basert på en WordPress
 Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
 filmene. Et stort takk rettes derfor til Tom Jarle!
 
-Relevante kodeeksempler finnes på GitHub og jsBin.
+Dokumentet er bygget opp etter strukturen til kompetansemåla i faget,
+(se avsnitt: ref{section:kompetansemål}), og inneholder teori,
+oppgaver og videoer. Relevante kodeeksempler finnes på
+"`gist.github'":"http://gist.github.com/johanhake" og jsBin.
 
-Nettstedet er bygget opp etter strukturen til kompetansemåla i faget,
-(se avsnitt: ref{section:kompetansemål}), og inneholder teori, oppgaver
-og videoer.
+Dokumentet er lagd med hjelp
+"`doconce`":"http://hplgit.github.io/doconce/doc/web/index.html".  Et
+stort takk rettes til visjonæren "`Hans Petter
+Langtangen`":"http://hplgit.github.io/homepage/index.html" som har
+utarbeidet dette verktøy.
 
-Bli gjerne med i nettverket for lærere som er interessert i IT2 med
-javascript på "`facebook`":"https://www.facebook.com/groups/231993360276497".
+#Bli gjerne med i nettverket for lærere som er interessert i IT2 med
+#javascript på "`facebook`":"https://www.facebook.com/groups/231993360276497".
 
-Johan Hake, August 2015
+Du står helt fritt til å bruke innholdet du finner i dette dokumentet
+slik du selv måtte ønske, så lenge du deler videre med vilkårene
+under. 
+
+"`Johan Hake`":"mailto:johan.hake@gmail.com", August 2015
+
+Dette verk er lisensieret under en Creative Commons
+Navngivelse-DelPåSammeVilkår 3.0 Norge
+"`lisens`":"http://creativecommons.org/licenses/by-sa/3.0/no/".
 
 !split
 
@@ -46,7 +156,381 @@ kompetansemålene i faget:
 ===== Multimedieutvikling =====
 label{section:teori:multimedieutvikling}
 
+=== Editor og filbehandling ===
+label{section:teori:editorogfilbehandling}
+
+Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
+gjøre. Dette gjelder også når vi skal programmere. I denne boka
+skal vi benytte oss av to typer verktøy.
+
+- Nettleser: Program der koden kjøres og skjermbildet vises
+- Editor: Her skrives og editeres programkoden 
+
+__Nettlesere.__
+
+De fleste moderne nettlesere fungerer veldig bra som støtteverktøy
+til programmering. De har de funksjoner og verktøy som trengs for å
+jobbe med HTML-programmering på en effektiv og god måte. De mest
+brukte nettleserne i dag er Chrome, FireFox, Internet Explorer, Opera
+og Safari.
+
+__Editor.__
+
+Det finnes veldig mange gode editorer for programmering. De mest
+avanserte er store programmeringsmijø, eller
+"`IDE'er`":"http://en.wikipedia.org/wiki/Integrated_development_environment"
+som de også kalles. I dette kurset kommer vi langt med noe enklere
+editorer, som allikevel er veldig kraftige og funksjonsrike.
+
+FIGURE: [figures/editor_sublime_eksempel, frac=0.50] Et lite ekesmpel på hvordan et enkelt HTML-dokument kan se ut.
+
+Til dette kurset anbefaler jeg at dere bruker
+"`notepad++`":"https://notepad-plus-plus.org" eller "`Sublime
+Text`":"http://www.sublimetext.com/2" 2. Disse er enkle, men allikevel
+kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
+flere filer samtidig. De har også god støtte for automatiske
+kodeforslag og fargelegging av kode slik at lesing går lettere.
+
+__Før vi lager vårt første html-side.__
+
+Nå er vi straks klare til å sette i gang med det som er gøy, men
+før det må vi ha noen få ting på plass...
+
+!bnotice Før vi lager vårt første html-side må vi...
+o Lag en mappe som skal inneholde filene du lager. (Hvert program skal ha sin egen mappe).
+o Lag et nytt html-dokument som inneholder koden under. (Se under for startkoder).
+!enotice
+
+__Example: Kom igang med editorn.__
+label{example:komigang}
+
+!bnotice Programkoden som du kan bruke i et HTML-dokument for å komme i gang.
+!bc html
+<!doctype html>
+<html lang="nb">
+<head>
+	<meta charset="UTF-8">
+	<title>Mitt foerste HTML-dokument</title>
+</head>
+<body>
+	<h1>Dette er en overskrift.</h1> 
+	<p>Dette er en paragraf, og denne teksten ser litt 
+    annerledes ut enn en overskrift</p>
+</body>
+</html>
+!ec
+!enotice 
+
 !split
+
+=== HTML === 
+label{section:teori:html} 
+
+_HyperText Markup Language_ (HTML, hypertekstmarkeringsspråk) er et
+"`markeringsspråk`":"http://no.wikipedia.org/wiki/Markeringsspråk" for
+formatering av "`nettsider`":"http://no.wikipedia.org/wiki/Nettside"
+med "`hypertekst'":"http://no.wikipedia.org/wiki/Hypertekst" og annen
+informasjon som kan vises i en
+"`nettleser`":"http://no.wikipedia.org/wiki/Nettleser". HTML benyttes
+til å strukturere informasjon - angi noe tekst som overskrifter,
+avsnitt, lister og så videre - og kan, i en viss grad, brukes til å
+beskrive utseende og semantikk i et dokument.
+
+HTML ble opprinnelig definert i 1989 av "`Tim
+Berners-Lee`":"https://no.wikipedia.org/wiki/Tim_Berners-Lee" og
+"`Robert Caillau`":"https://en.wikipedia.org/wiki/Robert_Cailliau" og
+videreutviklet av "`IETF`":"http://no.wikipedia.org/wiki/IETF" og er
+nå en internasjonal standard
+("`ISO`":"http://no.wikipedia.org/wiki/International_Organization_for_Standardization"/"`IEC`":"http://no.wikipedia.org/wiki/International_Electrotechnical_Commission"
+15445:2000). Siden har HTML-spesifikasjonene blitt opprettholdt av
+"`World Wide Web
+Consortium`":"http://no.wikipedia.org/wiki/World_Wide_Web_Consortium"
+(W3C)[^html]. 
+
+[^html]: Hentet fra wikipediaartikkelen om "`HTML`":"http://no.wikipedia.org/wiki/HTML".
+
+__Programmering i HTML.__
+
+Et HTML-dokument består av koder, eller "tagger" som beskriver hvordan
+vi vil at siden skal se ut, og i noen grad hva slags funksjonalitet
+den skal ha. I tabellen under finner du noen av de vanligste kodene
+som brukes[^html-tags].
+
+[^html-tags]: For en utfyllende liste se "`http://www.w3schools.com`":"http://www.w3schools.com/tags/ref_byfunc.asp".
+
+<%
+col_positions = "|l|l|l|"
+col_formats = {0:"code", 2:"code",}
+row_contents = [[r"Tag", r"Beskrivelse", ur"Eksempel på bruk"],
+   [ur"<h1>...<h6>", r"Overskrift", ur"<h3>Dette er en liten overskrift</h3>"],
+   [ur"<p>",  ur"Avsnitstekst",     ur"<p>Denne teksten blir samlet i et avsnitt.</p>"],
+   [ur"<b>",  ur"Fet skrift",       ur"<b>Denne teksten blir fet</b>"],
+   [ur"<i>",  ur"Kursiv",           ur"<i>Denne teksten er i kursiv</i>"],
+   [ur"<br>", ur"Linjeskift",       ur"Tekst på en linje<br>\\Tekst på linja under"],
+   [ur"<hr>", ur"Horisontal linje", ur"<hr>"],
+   [ur"<a>",  ur"Hyperlenke",        u"<a href=\"http://www.w3c.org\">\\\\Fagnettsted</a>"],
+   [ur"<a>",  ur"Epostlenke",        u"<a href=\"mailto:postmottak@kd.dep.no\">\\\\Send e-post</a>"],
+   [ur"<img>", u"Sette inn bilde",   u"<img src=\"mittBilde.jpg\">"],
+   [ur"<ul> og <li>", u"Punktliste", ur"<ul>\\  <li>Punkt 1</li>\\  <li>Punkt 2</li>\\</ul>"],
+   [ur"<ol> og <li>", u"Nummerert liste", ur"<ol>\\  <li>Punkt 1</li>\\  <li>Punkt 2</li>\\</ol>"],
+   [ur"<table>, <tr>\\og <td>", u"Tabell", ur"<table>\\  <tr><td>Celle1</td><td>Celle2</tr>\\  <tr><td>Celle1</td><td>Celle2</tr>\\</table>",]]
+#print tableify(FORMAT, row_contents, col_positions, col_formats)
+%>
+${tableify(FORMAT, row_contents, col_positions, col_formats)}
+
+Fra tabellen ser vi at noen tagger trenger en lukketag, som sier nåt
+taggen slutter, f eks: `</a>`, `</tr>` og `</td>`. Hvis ikke en
+lukketag følger den tilsvarende åpningstaggen får vi et syntaksfeil og
+siden kan oftest ikke vises. Noen tagger trenger ikke en lukketag, f
+eks: `<hr>` og `<br>`.
+
+HTML-koden settes sammen i et HTML-dokument som igjen kan vises i en
+nettleser.
+ 
+!bblock
+!bc html
+<!doctype html>
+<html lang="nb">
+<head>
+	<meta charset="UTF-8">
+	<title>Mitt første HTML-dokument</title>
+</head>
+<body>
+	<h1>Dette er en overskrift.</h1> 
+	<p>Dette er en paragraf, og denne teksten ser litt annerledes 
+          ut enn en overskrift</p>
+</body>
+</html>
+!ec
+!eblock
+
+Hvert html dokument må ha noen standard tagger som `<!doctype>` og
+`<html>`. "`doctype`":"http://www.w3schools.com/tags/tag_doctype.asp"
+taggen sier til en netleser at det er et html dokument og
+"`html`":"http://www.w3schools.com/tags/tag_html.asp" taggen sier hvor
+selve html koden kommer. Vi ser fra eksempelet at `<html>` taggen har
+en så kallt attributt: `lang="no"`, som er tileggsinformasjon til
+taggen, se nedan. På rad 3-6 defineres `<head>`
+"`taggen`":"http://www.w3schools.com/tags/tag_head.asp", som bestemmer
+egenskaper til hele html siden, for eksempel titel og tegnsett
+(encoding). En html dokument bør også ha en `<body>` tag. Denne
+"`taggen`":"http://www.w3schools.com/tags/tag_body.asp" inneholder det
+som skall vises på siden.
+
+__Example: Test tagger.__
+label{example:testtagger}
+
+% if FORMAT in ("html", "mwiki"):
+<a class="jsbin-embed" href="http://jsbin.com/jitosi/1/embed?html,output">Test tagger</a><script src="http://static.jsbin.com/js/embed.min.js?3.34.1"></script>
+
+% else:
+!bnotice Test ulike tagger gjennom å laste in filen i en editor og en nettleser
+!bc html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Tagtesting!</title>
+</head>
+<body>
+    <h1>Test tagger her!</h1>
+    <p>Prøv deg selv med egen kode ved å skrive i HTML-fanen.</p>
+</body>
+</html>
+!ec
+!enotice 
+%endif
+
+__Attributter.__
+
+Attributter brukes for å gi ekstra informasjon til hva taggen skal
+gjøre. En attributt plasseres inne i taggen, og kan for eksempel
+inneholde informasjon om bakgrunnsfarge, plassering eller
+identifikatorer som skal gjelde for den aktuelle taggen. Det er fullt
+mulig å ha flere attributter i samme tag.
+
+<%
+col_positions = "|l|l|l|"
+col_formats = {0:"code", 2:"code",}
+row_contents = [[ur"Attributtnavn", ur"Egenskap", ur"Eksempel"],
+   [ur"align", r"Plassering av teksten", u"<h1 align=\"right\">Denne\\\\overskriften vil stå på høyre side</h1>"],
+   [ur"bgcolor",  ur"Bakgrunnsfarge", u"<h1 bgcolor=\"green\">Denne\\\\overskriften vil ha grønn bakgrunn</h1>"],
+   [ur"height og width", ur"Høyde og bredde på bilder,\\tabeller og celler", u"<table width=\"300px\">"]]
+#print tableify(FORMAT, row_contents, col_positions, col_formats)
+%>
+${tableify(FORMAT, row_contents, col_positions, col_formats)}
+
+Attributter er en viktig del av et HTML-dokument, og gjør at vi kan
+*finjustere* taggene til å vise innhold slik vi ønsker. For mer
+avansert design og utseende må vi benytte oss av CSS.
+
+!bnotice Her brukes attributtene src og width for å gi egenskaper til bilde-taggen
+!bc html
+<body>
+  <h1>Min timeplan</h1>
+  <img src="bilder/klasserom.jpg" width="400px">
+</body>
+!ec
+!enotice
+
+__input.__
+
+Veldig ofte ønsker vi at brukeren skal legge inn informasjon slik at
+den kan lagres eller bearbeides. For å få til dette kan vi bruke
+`<input>`. Ved å bruke denne taggen sammen med ulike attributter kan vi
+lage elementer som tekstbokser, radioknapper, draknapper, datobokser
+osv. `<input>` brukes ofte sammen med `<form>` som samler alle
+input-tagger i et skjema. Selv om `<input>` kun er en enkelt tag, så
+kan man få den til å ha mange former ved å bruke attributten `type`.
+
+!bnotice Eksempel på input-tag
+!bc html
+<form>
+Fornavn: <input type="text"><br>
+Etternavn: <input type="text">
+</form>
+!ec
+!enotice
+
+Det finnes mange ulike typer inputfelt. I tabellen under finner du
+eksempel på flere.
+
+<%
+col_positions = "|l|l|"
+col_formats = {}
+row_contents = [[ur"Type", ur"Beskrivelse"],
+["button", u"Vanlig trykknapp"],
+["color", u"Fargevelger"],
+["date", u"Datovelger"],
+["datetime", u"Dato- og tidsvelger"],
+["email", u"Tekstfelt for epost"],
+["month", u"Månedsvelger"],
+["password", u"Tekstfelt for passord"],
+["radio", u"Radioknapper"],
+["range", u"Glideknapp"],
+["reset", u"Nulstiller alt som er inne i samme form"],
+["search", u"Søkefelt"],
+["submit", u"Sender all data som er i samme form"],
+["tel", u"Felt for telefonnummer"],
+["text", u"Tekstfelt"],
+["time", u"Klokkeslett"],
+["url", u"Felt for nettadresser"],
+["week", u"Ukevelger"],
+["checkbox", u"Avkryssingsbokser"],
+["number", u"Tallvelger"]]
+#print tableify(FORMAT, row_contents, col_positions, col_formats)
+%>
+${tableify(FORMAT, row_contents, col_positions, col_formats)}
+
+__Example: Test input.__
+label{example:testinput}
+
+% if FORMAT in ("html", "mwiki"):
+<a class="jsbin-embed" href="http://jsbin.com/bezaxe/1/embed?html,output">Test input</a><script src="http://static.jsbin.com/js/embed.min.js?3.34.1"></script>
+
+% else:
+!bnotice Test ulike input-typer gjennom å laste in filen i en editor og en nettleser
+!bc html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+<body>
+    <h1> Her kan du teste ulike input-typer</h1><br>
+    <p>Prøv for eksempel: "color", "checkbox" eller "number".
+    <input type="text">
+</html>
+!ec
+!enotice 
+%endif
+
+__taggene video og audio.__ 
+
+"`Video`":"http://www.w3schools.com/tags/tag_video.asp" og
+"`audio`":"http://www.w3schools.com/tags/tag_audio.asp"-taggene er
+brukes når man skal spille av film og lyd. Flere formater støttes, og
+man har mulighet for volum og avspillingskontroll.
+
+!bnotice Eksempel på audio og video-tagger med ulike attributter
+!bc html
+<audio controls>
+    <source src="lyd.ogg">
+</audio>
+<video width="320" height="240" controls>
+  <source src="film.ogg">
+</video>
+!ec
+!enotice 
+
+__div.__
+
+`<div>` er en fin måte å lage et avgrenset område på
+nettsiden. `<div>` i seg selv er kun et tomt skall, og vi er nødt til
+å fylle på med innhold mellom start- og slut-taggen. Ved å bruke
+attributter på div-taggen kan vi få den til å se ut på mange
+forskjellige måter.
+
+__Example: Lek med div.__
+label{example:Lekmeddiv}
+
+% if FORMAT in ("html", "mwiki"):
+Her kan du endre på div-style attributten selv.
+<a class="jsbin-embed" href="http://jsbin.com/cucisa/embed?html,output">Leke med div</a><script src="http://static.jsbin.com/js/embed.min.js?3.34.1"></script>
+
+% else:
+!bnotice Her kan du endre på div-style attributten selv gjennom å laste in filen i en editor og en nettleser
+FIGURE: [figures/jeg_ligger_i_en_div,frac=0.50]
+
+!bc html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Leke med div</title>
+</head>
+<body>
+	<div  style="text-align: center;
+            width: 200px;
+            height: 100px;
+            background-color: #aa5555;
+            border-color: brown;
+            border-width: 6px;
+            border-style: solid;
+            border-radius: 0px 40px;
+            box-shadow: 10px 10px 5px #888888;">
+      <h2>Jeg ligger i en div!</h2></div>
+</body>
+</html>
+!ec
+!enotice 
+%endif
+
+Det finnes så mange html-tagger og ulike attributter at de færreste
+husker alle selv. Det er derfor viktig å lære seg å slå
+opp. "`W3schools.com`":"http://W3schools.com" er et nettsted der du
+selv kan finne tagger, og se eksempler på hvordan de brukes.
+
+__DOM treet.__
+
+Når en webside lastes skaper nettleseren en Document Object Model
+(DOM) av siden. HTML DOM modellen skapes som et tre av objekter, se
+figur ref{figure:domtree}. DOM er en W3C standard, som definerer
+metoder for å få tilgang på og endre et HTML (eller XML) dokument.
+
+FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter label{figure:domtree} 
+
+#When a web page is loaded, the browser creates a Document Object Model
+#of the page.  The HTML DOM model is constructed as a tree of Objects:
+
+!split
+
+=== CSS === 
+label{section:teori:css} 
+
+!split
+
 ===== Programmering =====
 label{section:teori:programmering}
 
@@ -56,205 +540,3 @@ label{section:teori:planlegging}
  
 !split
 
-======= Læreplan i informasjonsteknologi =======
-
-Denne seksjonen er hentet fra "`udir`":"http://www.udir.no/kl06/inf1-01/Hele".
-
-===== Formål =====
-
-Informasjonsteknologien har hatt stor betydning for
-samfunnsutviklingen de siste tiårene. Teknologien har i løpet av kort
-tid endret kommunikasjonsmønsteret i samfunnet og skapt nye
-arbeidsplasser og lærings- og forskningsarenaer. Samfunnet har behov
-for mennesker som kan forstå, benytte og videreutvikle
-informasjonsteknologien, men samfunnet trenger også mennesker med en
-bevisst og kritisk holdning til hva teknologien gjør med mennesker og
-samfunn. Informasjonsteknologien gir muligheter for å lage helt nye
-produkter og tjenester gjennom kreativitet og samarbeid over
-faggrenser, og bidrar dermed til teknologisk innovasjon.
-
-Programfaget skal gi trening i kreativ tenkning og problemløsning og
-i å formulere presise beskrivelser og finne generelle
-mønstre. Programfaget skal bidra til å gi innsikt i hvordan
-informasjon i form av tall, tekster, bilder, grafikk, film, lyd og
-animasjoner kan struktureres og behandles automatisk som data, og
-hvilke krav det setter til datamaskiner og annet digitalt
-utstyr. Gjennom programfaget skal den enkelte få erfaring med bruk av
-moderne teknologi og relevante utviklingsverktøy, og hvordan
-sammensmelting av data-, lyd- og bildeteknologi kan gi rom for
-skapende bruk av teknologien.
-
-Opplæringen legger vekt på å konstruere IT-løsninger, og
-informasjonsteknologi er derfor på mange måter et praktisk fag. Det
-skal legges til rette for kommunikasjon og samarbeid i
-programfaget. Programfaget informasjonsteknologi er et realfag, men
-det har også sterke koblinger til mediefag, samfunnsfag, økonomi,
-språkfag og formgivingsfag. Programfaget kan derfor gi et godt
-grunnlag for studier innen ulike fagområder og for videreutvikling av
-kompetanse i yrkeslivet.
-
-===== Grunnleggende ferdigheter =====
-
-Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
-bidrar til utvikling av og er en del av fagkompetansen. I
-informasjonsteknologi forstås grunnleggende ferdigheter slik:
-
-!bblock 
-
-_Å kunne uttrykke seg muntlig og skriftlig_ i informasjonsteknologi
-innebærer å planlegge og beskrive IT-løsninger, og utarbeide
-brukerveiledninger og dokumentasjon. Videre vil det si å formulere
-presise instruksjoner for datamaskiner i et programmeringsspråk. Det
-betyr også å uttrykke seg på en klar og presis måte.
-
-_Å kunne lese_ i informasjonsteknologi innerærer å tolke beskrivelser,
-brukerveiledninger, diagrammer, modeller, symboler og programkode på
-en presis måte. Videre betyr det å forstå fagspesifikke tekster.
-
-_Å kunne regne_ i informasjonsteknologi innebærer å gjøre enkle
-utregninger eller uttrykke formler i et programmeringsspråk. Videre
-vil det si å bruke enkel matematisk logikk for å uttrykke en
-betingelse på en presis måte.
-
-_Å kunne bruke digitale verktøy_ utgjør en grunnstamme i
-informasjonsteknologi. Det innebærer å bruke IT-løsninger på en
-effektiv måte og bruke digitale verktøy både i planleggings- og
-dokumentasjonsprosesser.
-!eblock
-
-===== Kompetansemål IT2 =====
-label{section:kompetansemål}
-
-=== Planlegging og dokumentasjon ===
-
-Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
-disse etter gitte spesifikasjoner for å oppfylle brukernes
-behov. Videre dreier det seg om dokumentasjon og vurdering av
-IT-løsninger. Hovedområdet omfatter også utforming, dokumentasjon og
-vurdering av løsninger i forhold til retningslinjer for
-brukergrensesnitt.
-
-!bnotice Mål for opplæringen er at eleven skal kunne:
-o spesifisere og begrunne funksjonelle krav til planlagte IT-løsninger 
-o velge og bruke relevante teknikker og verktøy for planlegging og utvikling av IT-løsninger
-o lage brukerveiledninger for IT-løsninger
-o gjøre rede for hvordan IT-løsninger utvikles i samarbeid mellom personer, og hvilke krav det setter til planleggings- og utviklingsprosessen
-o forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT-løsninger, med spesiell vekt på å dokumentere grensesnitt mellom ulike delsystemer
-!enotice
-
-=== Programmering ===
-
-Hovedområdet handler om hvordan formelle språk kan brukes til å
-formulere strukturer og sette sammen instruksjoner som kan utføres av
-en datamaskin. Sentralt i hovedområdet er eksperimentering og
-problemløsning. I tillegg dreier det seg om objektorientering.
-
-!bnotice Mål for opplæringen er at eleven skal kunne:
-o lese og bruke dokumentasjon og kode
-o definere variabler og velge hensiktsmessige datatyper
-o tilordne uttrykk til variabler
-o programmere med enkle og indekserte variabler eller andre kolleksjoner av variabler
-o programmere med valg og gjentakelser
-o lage egne og bruke egne og andres funksjoner eller metoder med parametere
-o programmere funksjoner eller metoder som blir aktivisert av hendelser
-o utvikle og sette sammen delprogrammer
-o teste og finne feil i programmer ved å bruke vanlige teknikker
-o gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, objekt og arv
-!enotice 
-
-=== Multimedieutvikling ===
-
-Hovedområdet handler om utforming, strukturering, implementering og
-vurdering av multimedieapplikasjoner med tall, tekst, lyd, bilde,
-video og animasjoner. I tillegg omfatter hovedområdet både
-applikasjoner for lokal bruk og publisering over Internett.
-
-!bnotice Mål for opplæringen er at elevene skal kunne:
-o planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner
-o bruke programmeringsspråk i multimedieapplikasjoner
-o vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner
-o vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet
-!enotice 
-
-!split
-
-# sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console 
-
-!bc js
-var start_x = 80;
-var start_y = 70;
-var bredde = 60;
-var hojde = 240;
-
-rect(start_x, start_y, bredde, hojde);
-rect(start_x+3*bredde, start_y, bredde, hojde);
-rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
-
-var c=document.getElementById("myCanvas");
-var ctx=c.getContext("2d");
-
-var start_x = 80;
-var start_y = 70;
-var bredde = 60;
-var hojde = 240;
-
-ctx.rect(start_x, start_y, bredde, hojde);
-ctx.rect(start_x+3*bredde, start_y, bredde, hojde);
-ctx.rect(start_x+bredde, start_y+(hojde-bredde)/2, 2*bredde, bredde);
-ctx.stroke();
-
-
-
-!ec
-
-% if FORMAT in ("html", "mwiki"):
-<a class="jsbin-embed" href="http://jsbin.com/pabowo/3/embed?html,css,live">JS Bin demo</a><script src="http://static.jsbin.com/js/embed.js"></script>
-
-% else:
-!bnotice Kode eksempel:
-!bc html
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="description" content="Leke med div">
-  <meta charset="utf-8">
-  <title>JS Bin</title>
-<style id="jsbin-css">
-#minDiv{
- text-align: center;
-	width: 200px;
-	height: 100px;
-	background-color: #aa5555;
-	border-color: brown;
-	border-width: 6px;
-	border-style: solid;
-	border-radius: 0px 40px;
-	box-shadow: 10px 10px 5px #888888;
-}
-</style>
-</head>
-<body>
-	<div id="minDiv"><h2>Jeg ligger i en div!</h2></div>
-
-
-<script id="jsbin-source-css" type="text/css">#minDiv{
- text-align: center;
-	width: 200px;
-	height: 100px;
-	background-color: #aa5555;
-	border-color: brown;
-	border-width: 6px;
-	border-style: solid;
-	border-radius: 0px 40px;
-	box-shadow: 10px 10px 5px #888888;
-}</script>
-</body>
-</html>
-!ec
-!enotice 
-
-% endif
-
-MOVIE: [http://www.youtube.com/embed/exjxJVQC3ms] For løkker
-
-#"DocOnce source of this document": "http://johanhake.github.io/js/js.do.txt"

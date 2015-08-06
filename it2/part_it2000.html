@@ -17,19 +17,26 @@ Automatically generated HTML file from DocOnce source
 -->
 
 
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 1,
- 'sections': [(u'Introduksjon',
-               1,
-               u'section:introduksjon',
-               u'section:introduksjon'),
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
               (u'Teori', 1, None, '___sec1'),
               (u'Multimedieutvikling',
                2,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
               (u'Programmering',
                2,
                u'section:teori:programmering',
@@ -38,16 +45,16 @@ Automatically generated HTML file from DocOnce source
                2,
                u'section:teori:planlegging',
                u'section:teori:planlegging'),
-              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec5'),
-              (u'Form\xe5l', 2, None, '___sec6'),
-              (u'Grunnleggende ferdigheter', 2, None, '___sec7'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
               (u'Kompetansem\xe5l IT2',
                2,
                u'section:kompetansem\xe5l',
                u'section:kompetansem\xe5l'),
-              (u'Planlegging og dokumentasjon', 3, None, '___sec9'),
-              (u'Programmering', 3, None, '___sec10'),
-              (u'Multimedieutvikling', 3, None, '___sec11')]}
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -68,18 +75,21 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
+     <!-- navigation toc: --> <li><a href="#section:forord" style="font-size: 80%;"><b>Forord</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec5" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:editorogfilbehandling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor og filbehandling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:html" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:css" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2005.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2006.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec8" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
 
         </ul>
       </li>
@@ -92,6 +102,7 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
+<a name="part0000"></a>
 <a name="part0000"></a>
 <!-- ------------------- main content ---------------------- -->
 
@@ -109,14 +120,17 @@ end of tocinfo -->
 <p>
 <!-- institution(s) -->
 <p>
-<center><h4>Aug 5, 2015</h4></center> <!-- date -->
+<center><h4>Aug 6, 2015</h4></center> <!-- date -->
 <p>
-<center><p><img src="figures/javascript-seeklogo.svg" align="bottom" width=300></p></center>
+<!-- sphinx code-blocks: js=javascript pycod=python cod=fortran cppcod=c++ sys=console -->
+
+<p>
+<center><p><img src="figures/javascript-seeklogo.svg" align="bottom" ></p></center>
 
 <p>
 <a href="it2.pdf" target="_self">PDF versjon av dette dokumentet (for printing)</a>
 
-<h1 id="section:introduksjon">Introduksjon</h1>
+<h1 id="section:forord">Forord</h1>
 
 <p>
 Dette er en ressurs for elever og lærere som ønsker å bruke
@@ -128,19 +142,34 @@ Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
 filmene. Et stort takk rettes derfor til Tom Jarle!
 
 <p>
-Relevante kodeeksempler finnes på GitHub og jsBin.
+Dokumentet er bygget opp etter strukturen til kompetansemåla i faget,
+(se avsnitt: <a href="part_it2007.html#section:kompetansemål">Kompetansemål IT2</a>), og inneholder teori,
+oppgaver og videoer. Relevante kodeeksempler finnes på
+<a href="http://gist.github.com/johanhake" target="_self">`gist.github'</a> og jsBin.
 
 <p>
-Nettstedet er bygget opp etter strukturen til kompetansemåla i faget,
-(se avsnitt: <a href="part_it2005.html#section:kompetansemål">Kompetansemål IT2</a>), og inneholder teori, oppgaver
-og videoer.
+Dokumentet er lagd med hjelp
+<a href="http://hplgit.github.io/doconce/doc/web/index.html" target="_self"><tt>doconce</tt></a>.  Et
+stort takk rettes til visjonæren <a href="http://hplgit.github.io/homepage/index.html" target="_self"><tt>Hans Petter
+Langtangen</tt></a> som har
+utarbeidet dette verktøy.
 
 <p>
-Bli gjerne med i nettverket for lærere som er interessert i IT2 med
-javascript på <a href="https://www.facebook.com/groups/231993360276497" target="_self"><tt>facebook</tt></a>.
+<!-- Bli gjerne med i nettverket for lærere som er interessert i IT2 med -->
+<!-- javascript på <a href="https://www.facebook.com/groups/231993360276497" target="_self"><tt>facebook</tt></a>. -->
 
 <p>
-Johan Hake, August 2015
+Du står helt fritt til å bruke innholdet du finner i dette dokumentet
+slik du selv måtte ønske, så lenge du deler videre med vilkårene
+under.
+
+<p>
+<a href="mailto:johan.hake@gmail.com" target="_self"><tt>Johan Hake</tt></a>, August 2015
+
+<p>
+Dette verk er lisensieret under en Creative Commons
+Navngivelse-DelPåSammeVilkår 3.0 Norge
+<a href="http://creativecommons.org/licenses/by-sa/3.0/no/" target="_self"><tt>lisens</tt></a>.
 
 <p>
 <p>
@@ -149,6 +178,10 @@ Johan Hake, August 2015
   <li class="next">
     <a href="part_it2001.html">Next &rarr;</a>
   </li>
+</ul>
+<p>
+<!-- navigation buttons at the bottom of the page -->
+<ul class="pager">
 </ul>
 <!-- ------------------- end of main content --------------- -->
 

@@ -17,19 +17,26 @@ Automatically generated HTML file from DocOnce source
 -->
 
 
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 1,
- 'sections': [(u'Introduksjon',
-               1,
-               u'section:introduksjon',
-               u'section:introduksjon'),
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
               (u'Teori', 1, None, '___sec1'),
               (u'Multimedieutvikling',
                2,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
               (u'Programmering',
                2,
                u'section:teori:programmering',
@@ -38,16 +45,16 @@ Automatically generated HTML file from DocOnce source
                2,
                u'section:teori:planlegging',
                u'section:teori:planlegging'),
-              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec5'),
-              (u'Form\xe5l', 2, None, '___sec6'),
-              (u'Grunnleggende ferdigheter', 2, None, '___sec7'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
               (u'Kompetansem\xe5l IT2',
                2,
                u'section:kompetansem\xe5l',
                u'section:kompetansem\xe5l'),
-              (u'Planlegging og dokumentasjon', 3, None, '___sec9'),
-              (u'Programmering', 3, None, '___sec10'),
-              (u'Multimedieutvikling', 3, None, '___sec11')]}
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -68,18 +75,21 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="part_it2000.html#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2000.html#section:forord" style="font-size: 80%;"><b>Forord</b></a></li>
      <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
      <!-- navigation toc: --> <li><a href="#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec5" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="part_it2005.html#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="#section:teori:editorogfilbehandling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor og filbehandling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:html" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:css" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2005.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2006.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec8" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2007.html#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
 
         </ul>
       </li>
@@ -96,6 +106,120 @@ end of tocinfo -->
 <!-- !split -->
 
 <h2 id="section:teori:multimedieutvikling">Multimedieutvikling</h2>
+
+<h3 id="section:teori:editorogfilbehandling">Editor og filbehandling</h3>
+
+<p>
+Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
+gjøre. Dette gjelder også når vi skal programmere. I denne boka
+skal vi benytte oss av to typer verktøy.
+
+<p>
+
+<dl>
+<dt>Nettleser:<dd> 
+  Program der koden kjøres og skjermbildet vises
+<dt>Editor:<dd> 
+  Her skrives og editeres programkoden 
+</dl>
+
+<b>Nettlesere.</b>
+
+<p>
+De fleste moderne nettlesere fungerer veldig bra som støtteverktøy
+til programmering. De har de funksjoner og verktøy som trengs for å
+jobbe med HTML-programmering på en effektiv og god måte. De mest
+brukte nettleserne i dag er Chrome, FireFox, Internet Explorer, Opera
+og Safari.
+
+<p>
+<b>Editor.</b>
+
+<p>
+Det finnes veldig mange gode editorer for programmering. De mest
+avanserte er store programmeringsmijø, eller
+<a href="http://en.wikipedia.org/wiki/Integrated_development_environment" target="_self"><tt>IDE'er</tt></a>
+som de også kalles. I dette kurset kommer vi langt med noe enklere
+editorer, som allikevel er veldig kraftige og funksjonsrike.
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 1:  Et lite ekesmpel på hvordan et enkelt HTML-dokument kan se ut. </p></center>
+<p><img src="figures/editor_sublime_eksempel.png" align="bottom" ></p>
+</center>
+
+<p>
+Til dette kurset anbefaler jeg at dere bruker
+<a href="https://notepad-plus-plus.org" target="_self"><tt>notepad++</tt></a> eller <a href="http://www.sublimetext.com/2" target="_self"><tt>Sublime
+Text</tt></a> 2. Disse er enkle, men allikevel
+kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
+flere filer samtidig. De har også god støtte for automatiske
+kodeforslag og fargelegging av kode slik at lesing går lettere.
+
+<p>
+<b>Før vi lager vårt første html-side.</b>
+
+<p>
+Nå er vi straks klare til å sette i gang med det som er gøy, men
+før det må vi ha noen få ting på plass...
+
+<p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <h3 class="panel-title">Før vi lager vårt første html-side må vi...</h3>
+  </div>
+<div class="panel-body">
+
+<ol>
+<li> Lag en mappe som skal inneholde filene du lager. (Hvert program skal ha sin egen mappe).</li>
+<li> Lag et nytt html-dokument som inneholder koden under. (Se under for startkoder).</li>
+</ol>
+</div>
+</div>
+
+
+<p>
+<b>Example: Kom igang med editorn.</b>
+<div id="example:komigang"></div>
+
+<p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+  <h3 class="panel-title">Programkoden som du kan bruke i et HTML-dokument for å komme i gang.</h3>
+  </div>
+<div class="panel-body">
+<p>
+
+<!-- code=html (!bc html) typeset with pygments style "default" -->
+<table class="highlighttable"><tr><td><div class="linenodiv" style="background-color: #f0f0f0; padding-right: 10px"><pre style="line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span style="color: #BC7A00">&lt;!doctype html&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;html</span> <span style="color: #7D9029">lang=</span><span style="color: #BA2121">&quot;nb&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;head&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #7D9029">charset=</span><span style="color: #BA2121">&quot;UTF-8&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;title&gt;</span>Mitt foerste HTML-dokument<span style="color: #008000; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/head&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;body&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;h1&gt;</span>Dette er en overskrift.<span style="color: #008000; font-weight: bold">&lt;/h1&gt;</span> 
+	<span style="color: #008000; font-weight: bold">&lt;p&gt;</span>Dette er en paragraf, og denne teksten ser litt 
+    annerledes ut enn en overskrift<span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/html&gt;</span>
+</pre></div>
+</td></tr></table><p>
+</div>
+</div>
+
 
 <p>
 <p>

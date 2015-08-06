@@ -17,19 +17,26 @@ Automatically generated HTML file from DocOnce source
 -->
 
 
+<!-- use highlight.js and styles for code -->
+<script src="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 
 <!-- tocinfo
 {'highest level': 1,
- 'sections': [(u'Introduksjon',
-               1,
-               u'section:introduksjon',
-               u'section:introduksjon'),
+ 'sections': [(u'Forord', 1, u'section:forord', u'section:forord'),
               (u'Teori', 1, None, '___sec1'),
               (u'Multimedieutvikling',
                2,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
+              (u'Editor og filbehandling',
+               3,
+               u'section:teori:editorogfilbehandling',
+               u'section:teori:editorogfilbehandling'),
+              (u'HTML', 3, u'section:teori:html', u'section:teori:html'),
+              (u'CSS', 3, u'section:teori:css', u'section:teori:css'),
               (u'Programmering',
                2,
                u'section:teori:programmering',
@@ -38,16 +45,16 @@ Automatically generated HTML file from DocOnce source
                2,
                u'section:teori:planlegging',
                u'section:teori:planlegging'),
-              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec5'),
-              (u'Form\xe5l', 2, None, '___sec6'),
-              (u'Grunnleggende ferdigheter', 2, None, '___sec7'),
+              (u'L\xe6replan i informasjonsteknologi', 1, None, '___sec8'),
+              (u'Form\xe5l', 2, None, '___sec9'),
+              (u'Grunnleggende ferdigheter', 2, None, '___sec10'),
               (u'Kompetansem\xe5l IT2',
                2,
                u'section:kompetansem\xe5l',
                u'section:kompetansem\xe5l'),
-              (u'Planlegging og dokumentasjon', 3, None, '___sec9'),
-              (u'Programmering', 3, None, '___sec10'),
-              (u'Multimedieutvikling', 3, None, '___sec11')]}
+              (u'Planlegging og dokumentasjon', 3, None, '___sec12'),
+              (u'Programmering', 3, None, '___sec13'),
+              (u'Multimedieutvikling', 3, None, '___sec14')]}
 end of tocinfo -->
 
 <body>
@@ -68,18 +75,21 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="._it2000.html#section:introduksjon" style="font-size: 80%;"><b>Introduksjon</b></a></li>
-     <!-- navigation toc: --> <li><a href="._it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
-     <!-- navigation toc: --> <li><a href="._it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
-     <!-- navigation toc: --> <li><a href="._it2003.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="._it2004.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec5" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
-     <!-- navigation toc: --> <li><a href="#___sec6" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2000.html#section:forord" style="font-size: 80%;"><b>Forord</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2001.html#___sec1" style="font-size: 80%;"><b>Teori</b></a></li>
+     <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:multimedieutvikling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2002.html#section:teori:editorogfilbehandling" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Editor og filbehandling</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2003.html#section:teori:html" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2004.html#section:teori:css" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CSS</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2005.html#section:teori:programmering" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="part_it2006.html#section:teori:planlegging" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec8" style="font-size: 80%;"><b>Læreplan i informasjonsteknologi</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Formål</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Grunnleggende ferdigheter</a></li>
      <!-- navigation toc: --> <li><a href="#section:kompetansemål" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Kompetansemål IT2</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec10" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
-     <!-- navigation toc: --> <li><a href="#___sec11" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec12" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Planlegging og dokumentasjon</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec13" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programmering</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec14" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multimedieutvikling</a></li>
 
         </ul>
       </li>
@@ -92,15 +102,15 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0005"></a>
+<a name="part0007"></a>
 <!-- !split -->
 
-<h1 id="___sec5">Læreplan i informasjonsteknologi </h1>
+<h1 id="___sec8">Læreplan i informasjonsteknologi </h1>
 
 <p>
-Denne seksjonen er hentet fra <a href="http://www.udir.no/kl06/inf1-01/Hele" target="_self"><tt>udir</tt></a>.
+Dette avsnittet er hentet fra <a href="http://www.udir.no/kl06/inf1-01/Hele" target="_self"><tt>udir</tt></a>.
 
-<h2 id="___sec6">Formål </h2>
+<h2 id="___sec9">Formål </h2>
 
 <p>
 Informasjonsteknologien har hatt stor betydning for
@@ -136,7 +146,7 @@ språkfag og formgivingsfag. Programfaget kan derfor gi et godt
 grunnlag for studier innen ulike fagområder og for videreutvikling av
 kompetanse i yrkeslivet.
 
-<h2 id="___sec7">Grunnleggende ferdigheter </h2>
+<h2 id="___sec10">Grunnleggende ferdigheter </h2>
 
 <p>
 Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
@@ -176,7 +186,7 @@ dokumentasjonsprosesser.
 
 <h2 id="section:kompetansemål">Kompetansemål IT2</h2>
 
-<h3 id="___sec9">Planlegging og dokumentasjon </h3>
+<h3 id="___sec12">Planlegging og dokumentasjon </h3>
 
 <p>
 Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
@@ -204,7 +214,7 @@ brukergrensesnitt.
 </div>
 
 
-<h3 id="___sec10">Programmering </h3>
+<h3 id="___sec13">Programmering </h3>
 
 <p>
 Hovedområdet handler om hvordan formelle språk kan brukes til å
@@ -235,7 +245,7 @@ problemløsning. I tillegg dreier det seg om objektorientering.
 </div>
 
 
-<h3 id="___sec11">Multimedieutvikling </h3>
+<h3 id="___sec14">Multimedieutvikling </h3>
 
 <p>
 Hovedområdet handler om utforming, strukturering, implementering og
@@ -265,10 +275,10 @@ applikasjoner for lokal bruk og publisering over Internett.
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
   <li class="previous">
-    <a href="._it2004.html">&larr; Prev</a>
+    <a href="part_it2006.html">&larr; Prev</a>
   </li>
   <li class="next">
-    <a href="._it2006.html">Next &rarr;</a>
+    <a href="part_it2008.html">Next &rarr;</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
