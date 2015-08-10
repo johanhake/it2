@@ -34,7 +34,7 @@ Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
 filmene. Et stort takk rettes derfor til Tom Jarle!
 
 Dokumentet er bygget opp etter strukturen til kompetansemåla i faget,
-(se avsnitt: ref{section:kompetansemål}), og inneholder teori,
+(se avsnitt: ref{section:kompetansemål_it2}), og inneholder teori,
 oppgaver og videoer. Relevante kodeeksempler finnes på
 "`gist.github'":"http://gist.github.com/johanhake" og jsBin. Du kan
 også laste ner alle kode eksemplene og oppgavene
