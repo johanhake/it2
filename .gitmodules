@@ -10,3 +10,6 @@
 [submodule "gist/eksempler/foerste_html_dokument"]
 	path = gist/eksempler/foerste_html_dokument
 	url = https://gist.github.com/e00efa0e50bfe51e0882.git
+[submodule "laereplan_it"]
+	path = laereplan_it
+	url = https://github.com/johanhake/laereplan_it.git

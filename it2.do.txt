@@ -424,7 +424,11 @@ label{section:teori:planlegging}
  
 !split
 
-# #include "laereplan_it2.do.txt"
+# #if FORMAT in ('latex', 'pdflatex')
+\pagebreak
+# #endif
+
+# #include "laereplan_it/laereplan_it.do.txt"
 
 !split
 

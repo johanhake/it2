@@ -549,6 +549,7 @@ label{section:teori:planlegging}
 
 Dette avsnittet er hentet fra "`udir`":"http://www.udir.no/kl06/inf1-01/Hele".
 
+
 ===== Formål =====
 
 Informasjonsteknologien har hatt stor betydning for
