@@ -23,6 +23,7 @@ doconce replace '\usepackage[a4paper]{geometry}' '\usepackage[a4paper, margin=1i
 pdflatex -shell-escape $TEXDOC
 pdflatex -shell-escape $TEXDOC
 
+rm kode.zip
 cd gist
 zip -r ../kode.zip eksempler oppgaver --exclude */.git
 
