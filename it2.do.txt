@@ -426,6 +426,8 @@ label{section:teori:planlegging}
 
 # #include "laereplan_it2.do.txt"
 
+!split
+
 ###!bc js
 ###var start_x = 80;
 ###var start_y = 70;

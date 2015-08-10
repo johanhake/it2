@@ -121,5 +121,3 @@ o bruke programmeringsspråk i multimedieapplikasjoner
 o vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner
 o vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet
 !enotice 
-
-!split
