@@ -1,8 +1,0 @@
-TITLE: Various writings
-AUTHOR: Johan Hake
-
-===== Emner på videregående skole =====
- * Fysikk 1 "HTML bootstrap": "fsy1/fys1.html", "HTML solarized": "fys1/fys1-solarized.html", "PDF": "fys1/fys1.pdf"
- * Informasjons teknonlogi 1 "HTML bootstrap": "it1/it1.html", "HTML solarized": "it1/it1-solarized.html", "PDF": "it1/it1.pdf"
- * Informasjons teknonlogi 2 "HTML bootstrap": "it2/it2.html", "HTML solarized": "it2/it2-solarized.html", "PDF": "it2/it2.pdf"
-
