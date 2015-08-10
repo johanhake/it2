@@ -22,7 +22,7 @@ FIGURE: [figures/javascript-seeklogo,frac=0.50]
 \pagebreak
 # #endif
 
-======= Forord =======
+========= Forord =========
 label{section:forord}
 
 Dette er en ressurs for elever og lærere som ønsker å bruke
@@ -65,7 +65,7 @@ Navngivelse-DelPåSammeVilkår 3.0 Norge
 \pagebreak
 # #endif
 
-======= Teori =======
+========= Teori =========
 
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
 kompetansemålene i faget:
@@ -82,10 +82,10 @@ kompetansemålene i faget:
 
 !split
 
-===== Multimedieutvikling =====
+======= Multimedieutvikling =======
 label{section:teori:multimedieutvikling}
 
-=== Editor og filbehandling ===
+===== Editor og filbehandling =====
 label{section:teori:editorogfilbehandling}
 
 Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
@@ -142,7 +142,7 @@ label{example:komigang}
 
 !split
 
-=== HTML === 
+===== HTML =====
 label{section:teori:html} 
 
 _HyperText Markup Language_ (HTML, hypertekstmarkeringsspråk) er et
@@ -410,16 +410,90 @@ FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www
 
 !split
 
-=== CSS === 
+===== Oppgaver HTML =====
+
+=== Exercise: Hallo verden. ===
+label{exercise:halloverden}
+
+"`Hallo verden`":"http://en.wikipedia.org/wiki/Hello_world_program" er
+en vanlig måte å teste ut ny teknologi på. I denne oppgaven skal du
+lage ditt første html-hallo-verden-program.
+
+FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra "`flickr`":"https://www.flickr.com/photos/34547181@N00/15573740578"
+
+Du skal lage siden `index.html`, som lagres i en egen mappe. Her skal
+du bruke så mye av det du har lært fra første avsnittet. Tittelen på
+siden skal være "Hallo verden!". Innholdet bestemmer du selv. Husk å
+lage oppgaven i en egen mappe.
+
+Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+
+=== Exercise: Ostekake. === 
+label{exercise:ostekake}
+
+Lag filen `index.html` i din favoritteditor, og lagre i egen
+mappe. Denne filen skal inneholde HTML-kode som lager siden vist under
+når du åpner den i en nettleser.
+
+FIGURE: [figures/ostekake,frac=0.75]
+
+Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+
+Bilden i oppgaven:
+"`http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg`":"http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg"
+
+Oppgaven er lisensiert under en "`Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens`":"http://creativecommons.org/licenses/by-sa/4.0".
+
+
+!bhint
+* Bruk `<div>` elementet for å ramme in reseptet.
+!ehint
+
+Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
+
+!bsol
+!bblock 
+!bc html
+
+# #include "loesninger/ostekake/index.html"
+
+!ec
+!eblock 
+!esol
+
+=== Exercise: Timeplanen ===
+label{exercise:timeplanen}
+
+Det er skolestart, og du skal lage en timeplan i html. Lag timeplanen
+på bildet under. Bildet kan du hente fra
+"`commons.wikimedia.org`":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
+å lagre oppgaven i egen mappe. Legg også bildet i en egen mappe med
+navn "bilder".
+
+FIGURE: [figures/mintimeplan,frac=0.50]
+
+!bsol
+!bblock 
+!bc html
+
+# #include "loesninger/timeplan/timeplan.html"
+
+!ec
+!eblock 
+!esol
+
+!split
+
+===== CSS =====
 label{section:teori:css} 
 
 !split
 
-===== Programmering =====
+======= Programmering =======
 label{section:teori:programmering}
 
 !split
-===== Planlegging og dokumentasjon =====
+======= Planlegging og dokumentasjon =======
 label{section:teori:planlegging}
  
 !split

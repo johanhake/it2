@@ -103,7 +103,7 @@ FIGURE: [figures/javascript-seeklogo,frac=0.50]
 
 \pagebreak
 
-======= Forord =======
+========= Forord =========
 label{section:forord}
 
 Dette er en ressurs for elever og lærere som ønsker å bruke
@@ -144,7 +144,7 @@ Navngivelse-DelPåSammeVilkår 3.0 Norge
 
 \pagebreak
 
-======= Teori =======
+========= Teori =========
 
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
 kompetansemålene i faget:
@@ -155,10 +155,10 @@ kompetansemålene i faget:
 
 !split
 
-===== Multimedieutvikling =====
+======= Multimedieutvikling =======
 label{section:teori:multimedieutvikling}
 
-=== Editor og filbehandling ===
+===== Editor og filbehandling =====
 label{section:teori:editorogfilbehandling}
 
 Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
@@ -226,7 +226,7 @@ label{example:komigang}
 
 !split
 
-=== HTML === 
+===== HTML =====
 label{section:teori:html} 
 
 _HyperText Markup Language_ (HTML, hypertekstmarkeringsspråk) er et
@@ -529,28 +529,250 @@ FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www
 
 !split
 
-=== CSS === 
+===== Oppgaver HTML =====
+
+=== Exercise: Hallo verden. ===
+label{exercise:halloverden}
+
+"`Hallo verden`":"http://en.wikipedia.org/wiki/Hello_world_program" er
+en vanlig måte å teste ut ny teknologi på. I denne oppgaven skal du
+lage ditt første html-hallo-verden-program.
+
+FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra "`flickr`":"https://www.flickr.com/photos/34547181@N00/15573740578"
+
+Du skal lage siden `index.html`, som lagres i en egen mappe. Her skal
+du bruke så mye av det du har lært fra første avsnittet. Tittelen på
+siden skal være "Hallo verden!". Innholdet bestemmer du selv. Husk å
+lage oppgaven i en egen mappe.
+
+Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+
+=== Exercise: Ostekake. === 
+label{exercise:ostekake}
+
+Lag filen `index.html` i din favoritteditor, og lagre i egen
+mappe. Denne filen skal inneholde HTML-kode som lager siden vist under
+når du åpner den i en nettleser.
+
+FIGURE: [figures/ostekake,frac=0.75]
+
+Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+
+Bilden i oppgaven:
+"`http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg`":"http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg"
+
+Oppgaven er lisensiert under en "`Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens`":"http://creativecommons.org/licenses/by-sa/4.0".
+
+
+!bhint
+* Bruk `<div>` elementet for å ramme in reseptet.
+!ehint
+
+Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
+
+!bsol
+!bblock 
+!bc html
+
+<!doctype html>
+<html lang="nb">
+<head>
+	<meta charset="UTF-8">
+	<title>Ostekake</title>
+</head>
+<body>
+    <div style="text-align: center;
+                width: 1000px;
+                background-color: LightGray;
+                border-color: black;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 40px;
+                padding: 10px;
+                box-shadow: 10px 10px 5px #888888;">
+
+    <h1>Min drømmeostekake</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Orange_cheesecake.jpg" 
+    width="30%">
+
+	<div style="text-align: left;">
+    <h2>Ingredienser:</h2>
+
+    <h3>Bunn:</h3>
+    <ul>
+        <li>1 pk Bixit kjeks</li>
+        <li>100 g smør/margarin</li>
+    </ul>
+
+    <h3>Ostemasse:</h3>
+    <ul>
+        <li>1 pk Sitrongele</li>
+        <li>1 pk kremfløte</li>
+        <li>1 pk lettrømme</li>
+        <li>1-1 1/2 pk Tine Kremost mandarin/ananas</li>
+        <li>150 g melis</li>
+    </ul>
+
+    <h3>Topp:</h3>
+    <ul>
+        <li>1 pk bringebærgele (eller annen smak)</li>
+    </ul>
+    
+    <h2>Tilberedning:</h2>
+    <p>
+        Smelt smør. Knus kjeksen. Bland dette sammen og press det ut i en rund
+        kakeform. Sett i kjøleskap mens ostemassen lages.
+    </p>
+    <p>
+        Lag sitrongele med halv mengde vann. Avkjøl, men pass på så den ikke
+        stivner. Pisk krem, tilsett rømme, ost melis og den avkjølte geleen.
+        Detta skall nå bli en glatt masse. Hell den over kjeksbunnen. Sett
+        kaken i kjøleskap (evt. i fryseren) til den er stivnet.
+    </p>
+    <p>
+        Lag bringebærgele med halv mengde vann. Avkjøl geleen og hell den over
+        kaken. Settes kjølig til geleen har stivnet. NB, ikke bruk hurtig
+        gele. Den stivner for fort. Fjern kakeformen. (Kaken kan evt. lages
+        direkte på kakefat med bare ringen fra formen)
+    </p>
+    </div>
+    </div>
+    
+</body>
+</html>
+
+!ec
+!eblock 
+!esol
+
+=== Exercise: Timeplanen ===
+label{exercise:timeplanen}
+
+Det er skolestart, og du skal lage en timeplan i html. Lag timeplanen
+på bildet under. Bildet kan du hente fra
+"`commons.wikimedia.org`":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
+å lagre oppgaven i egen mappe. Legg også bildet i en egen mappe med
+navn "bilder".
+
+FIGURE: [figures/mintimeplan,frac=0.50]
+
+!bsol
+!bblock 
+!bc html
+
+<!doctype html>
+<html lang="nb">
+<head>
+	<meta charset="UTF-8">
+	<title>Min timeplan</title>
+</head>
+    <body>
+        <h1>
+            Min Timeplan
+        </h1>
+        <img src="bilder/skolesal.jpg" width="25%">
+    </body>
+    <p>
+        <ul>
+            <li>Kontaktinformasjonen finnes på skolens hjemmeside</li>
+            <li>Husk rådegivertjenesten hver onsdag i 4. time</li>
+            <li>Kantinen er åpen fra kl 08:30 - kl 14:00 hver dag</li>
+        </ul>
+    </p>
+    <table border="1" style="background-color: LightYellow;">
+        <tr>
+            <td><b>Time</b></td><td><b>Mandag</b></td>
+            <td><b>Tisdag</b></td><td><b>Onsdag</b></td>
+            <td><b>Torsdag</b></td><td><b>Fredag</b></td>
+        </tr>
+        <tr>
+            <td><b>1. time</b></td><td>Norsk</td>
+            <td>Norsk</td><td>Samfunnsfag</td>
+            <td>IT2</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>2. time</b></td><td>Norsk</td>
+            <td>Norsk</td><td>Samfunnsfag</td>
+            <td>IT2</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>3. time</b></td><td>Norsk</td>
+            <td>Kjemi</td><td>Kontaktlærer</td>
+            <td>Kjemi</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>4. time</b></td><td>Norsk</td>
+            <td>Kjemi</td><td>Fritimme</td>
+            <td>Kjemi</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>5. time</b></td><td>Historie</td>
+            <td>Kroppsøving</td><td>Matematikk</td>
+            <td>Fysikk</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>6. time</b></td><td>Historie</td>
+            <td>Kroppsøving</td><td>Matematikk</td>
+            <td>Fysikk</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>7. time</b></td><td>Matematikk</td>
+            <td>RLE</td><td>IT2</td>
+            <td>Fysikk</td><td>Fagdag</td>
+        </tr>
+        <tr>
+            <td><b>8. time</b></td><td>Matematikk</td>
+            <td>RLE</td><td>IT2</td>
+            <td>Fysikk</td><td>Fagdag</td>
+        </tr>
+    </table>
+    <p>
+        <ul>
+            <li>Kontakt lærer på studieforberedende
+                <ol>
+                    <li>Arne Johansen</li>
+                    <li>Anna Jansen</li>
+                </ol>
+            </li>
+            <li>Kontakt lærer på yrkesfag
+                <ol>
+                    <li>Nina Nilsen</li>
+                    <li>Ola Pedersen</li>
+                    <li>Mette Lia</li>
+                </ol>
+            </li>
+        </ul>
+    </p>
+</html>
+
+!ec
+!eblock 
+!esol
+
+!split
+
+===== CSS =====
 label{section:teori:css} 
 
 !split
 
-===== Programmering =====
+======= Programmering =======
 label{section:teori:programmering}
 
 !split
-===== Planlegging og dokumentasjon =====
+======= Planlegging og dokumentasjon =======
 label{section:teori:planlegging}
  
 !split
 
 \pagebreak
 
-======= Læreplan i informasjonsteknologi =======
+========= Læreplan i informasjonsteknologi =========
 
 Dette avsnittet er hentet fra "`udir`":"http://www.udir.no/kl06/inf1-01/Hele".
 
 
-===== Formål =====
+======= Formål =======
 
 Informasjonsteknologien har hatt stor betydning for
 samfunnsutviklingen de siste tiårene. Teknologien har i løpet av kort
@@ -585,7 +807,7 @@ kompetanse i yrkeslivet.
 
 \pagebreak
 
-===== Grunnleggende ferdigheter =====
+======= Grunnleggende ferdigheter =======
 
 Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
 bidrar til utvikling av og er en del av fagkompetansen. I
@@ -616,10 +838,10 @@ dokumentasjonsprosesser.
 
 \pagebreak
 
-===== Kompetansemål IT1 =====
+======= Kompetansemål IT1 =======
 label{section:kompetansemål_it1}
 
-=== Digital samtid ===
+===== Digital samtid =====
 label{section:digitalsamtid}
 
 Hovedområdet handler om hvordan digitalt utstyr fungerer, og hvordan
@@ -641,7 +863,7 @@ o beskrive og drøfte informasjonsteknologiens muligheter og konsekvenser
 o beskrive og foreslå tiltak mot trusler i den digitale verden
 !enotice
 
-=== Nettsteder og multimedier ===
+===== Nettsteder og multimedier =====
 label{section:nettstederogmultimedier}
 Hovedområdet handler om utforming, implementering og vurdering av
 nettsteder med tekst, lyd, bilde, video og animasjoner. Sentralt i
@@ -658,7 +880,7 @@ o organisere og begrunne filstrukturen for nettsteder
 o sette opp krav til og vurdere nettsteder
 !enotice
 
-=== Databaser ===
+===== Databaser =====
 label{section:databaser}
 
 Hovedområdet handler om modellering og realisering av databaser, og
@@ -676,10 +898,10 @@ o lage dynamiske nettsider som bruker en database ved hjelp av spørrespråk og 
 
 \pagebreak
 
-===== Kompetansemål IT2 =====
+======= Kompetansemål IT2 =======
 label{section:kompetansemål_it2}
 
-=== Planlegging og dokumentasjon ===
+===== Planlegging og dokumentasjon =====
 label{section:planleggingogdokumentasjon}
 
 Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
@@ -697,7 +919,7 @@ o gjøre rede for hvordan IT-løsninger utvikles i samarbeid mellom personer, og
 o forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT-løsninger, med spesiell vekt på å dokumentere grensesnitt mellom ulike delsystemer
 !enotice
 
-=== Programmering ===
+===== Programmering =====
 label{section:programmering}
 
 Hovedområdet handler om hvordan formelle språk kan brukes til å
@@ -718,7 +940,7 @@ o teste og finne feil i programmer ved å bruke vanlige teknikker
 o gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, objekt og arv
 !enotice 
 
-=== Multimedieutvikling ===
+===== Multimedieutvikling =====
 label{section:multimedieutvikling}
 
 Hovedområdet handler om utforming, strukturering, implementering og
