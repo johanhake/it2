@@ -562,6 +562,7 @@ dokumentasjonsprosesser.
 label{section:kompetansemål_it1}
 
 === Digital samtid ===
+label{section:digitalsamtid}
 
 Hovedområdet handler om hvordan digitalt utstyr fungerer, og hvordan
 standarder, programvare og grensesnitt muliggjør samhandling mellom
@@ -583,7 +584,7 @@ o beskrive og foreslå tiltak mot trusler i den digitale verden
 !enotice
 
 === Nettsteder og multimedier ===
-
+label{section:nettstederogmultimedier}
 Hovedområdet handler om utforming, implementering og vurdering av
 nettsteder med tekst, lyd, bilde, video og animasjoner. Sentralt i
 hovedområdet er organisering og helhetlig grafisk utforming av
@@ -600,6 +601,7 @@ o sette opp krav til og vurdere nettsteder
 !enotice
 
 === Databaser ===
+label{section:databaser}
 
 Hovedområdet handler om modellering og realisering av databaser, og
 utvikling av IT-løsninger med utgangspunkt i databaser. Videre dreier
@@ -620,6 +622,7 @@ o lage dynamiske nettsider som bruker en database ved hjelp av spørrespråk og 
 label{section:kompetansemål_it2}
 
 === Planlegging og dokumentasjon ===
+label{section:planleggingogdokumentasjon}
 
 Hovedområdet handler om planlegging av IT-løsninger, og utvikling av
 disse etter gitte spesifikasjoner for å oppfylle brukernes
@@ -637,6 +640,7 @@ o forklare hensikten med teknisk dokumentasjon og lage slik dokumentasjon for IT
 !enotice
 
 === Programmering ===
+label{section:programmering}
 
 Hovedområdet handler om hvordan formelle språk kan brukes til å
 formulere strukturer og sette sammen instruksjoner som kan utføres av
@@ -657,6 +661,7 @@ o gjøre rede for hensikten med objektorientert utvikling og begrepene klasse, o
 !enotice 
 
 === Multimedieutvikling ===
+label{section:multimedieutvikling}
 
 Hovedområdet handler om utforming, strukturering, implementering og
 vurdering av multimedieapplikasjoner med tall, tekst, lyd, bilde,
@@ -666,7 +671,7 @@ applikasjoner for lokal bruk og publisering over Internett.
 !bnotice Mål for opplæringen er at elevene skal kunne:
 o planlegge og utvikle multimedieapplikasjoner ved å kombinere egne og andres multimedieelementer av typene tekst, bilde, lyd, video og animasjoner
 o bruke programmeringsspråk i multimedieapplikasjoner
-o vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner
+o vurdere og bruke relevante filformater for tekst, bilde, lyd, video og animasjoner 
 o vurdere multimedieprodukter med hensyn til brukergrensesnitt og funksjonalitet
 !enotice 
 
