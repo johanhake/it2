@@ -583,6 +583,8 @@ språkfag og formgivingsfag. Programfaget kan derfor gi et godt
 grunnlag for studier innen ulike fagområder og for videreutvikling av
 kompetanse i yrkeslivet.
 
+\pagebreak
+
 ===== Grunnleggende ferdigheter =====
 
 Grunnleggende ferdigheter er integrert i kompetansemålene der hvor de
@@ -612,8 +614,68 @@ effektiv måte og bruke digitale verktøy både i planleggings- og
 dokumentasjonsprosesser.
 !eblock
 
+\pagebreak
+
+===== Kompetansemål IT1 =====
+label{section:kompetansemål_it1}
+
+=== Digital samtid ===
+
+Hovedområdet handler om hvordan digitalt utstyr fungerer, og hvordan
+standarder, programvare og grensesnitt muliggjør samhandling mellom
+datamaskiner og annet utstyr. Videre dreier det seg om hvordan
+teknologien påvirker og påvirkes av samfunnet, og hvordan den enkelte
+møter teknologien i hverdagen. Kjennskap til gjeldende regelverk og
+etiske normer for bruk av informasjonsteknologi er sentralt. I tillegg
+inngår datasikkerhet i hovedområdet.
+
+!bnotice Mål for opplæringen er at eleven skal kunne:
+
+o beskrive ulike typer digitalt utstyr og forklare hovedtrekkene ved virkemåten
+o forklare hvordan de fysiske signalene i datautstyr kan tolkes som binære tall, tegnsett, grafiske framstillinger, billedpunkter og lyd
+o gjøre rede for standarder for kommunikasjon mellom ulike former for digitalt utstyr og mellom programmer
+o gjøre rede for hvilke utfordringer og muligheter den digitale verden kan skape for språklige og kulturelle minoriteter
+o gjøre rede for og argumentere for nødvendigheten av regelverk og etiske normer for bruk av informasjonsteknologi
+o beskrive og drøfte informasjonsteknologiens muligheter og konsekvenser
+o beskrive og foreslå tiltak mot trusler i den digitale verden
+!enotice
+
+=== Nettsteder og multimedier ===
+
+Hovedområdet handler om utforming, implementering og vurdering av
+nettsteder med tekst, lyd, bilde, video og animasjoner. Sentralt i
+hovedområdet er organisering og helhetlig grafisk utforming av
+nettstedene, slik at de blir tilgjengelige for brukere. Videre dreier
+det seg om bruk av standardløsninger i egenutviklede IT-løsninger.
+
+!bnotice Mål for opplæringen er at eleven skal kunne:
+o gjøre rede for hvilke standarder og prinsipper som muliggjør Internett
+o planlegge nettsteder som inneholder multimediekomponenter
+o utvikle nettsteder i henhold til planer og vurdere om krav til brukergrensesnitt er oppfylt
+o redigere nettsteder ved bruk av standardiserte oppmerkingsspråk
+o organisere og begrunne filstrukturen for nettsteder
+o sette opp krav til og vurdere nettsteder
+!enotice
+
+=== Databaser ===
+
+Hovedområdet handler om modellering og realisering av databaser, og
+utvikling av IT-løsninger med utgangspunkt i databaser. Videre dreier
+det seg om hvordan databaser kan gjøres tilgjengelige på nettsider ved
+hjelp av spørrespråk og programvare på tjener.
+
+!bnotice Mål for opplæringen er at eleven skal kunne:
+o gjøre rede for begrepene primærnøkkel, kandidatnøkkel, fremmednøkkel og atomærkravet
+o utvikle normaliserte datamodeller ut fra problemstillinger og begrunne valgene som er gjort
+o lage databaser i henhold til gitte datamodeller
+o utvikle, presentere og begrunne databaseapplikasjoner
+o lage dynamiske nettsider som bruker en database ved hjelp av spørrespråk og programvare på tjener
+!enotice
+
+\pagebreak
+
 ===== Kompetansemål IT2 =====
-label{section:kompetansemål}
+label{section:kompetansemål_it2}
 
 === Planlegging og dokumentasjon ===
 
