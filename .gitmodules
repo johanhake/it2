@@ -1,0 +1,12 @@
+[submodule "gist/eksempler/leke_med_div"]
+	path = gist/eksempler/leke_med_div
+	url = https://gist.github.com/38906681338edfb74fb2.git
+[submodule "gist/eksempler/test_input"]
+	path = gist/eksempler/test_input
+	url = https://gist.github.com/780de44ed09e1b03740e.git
+[submodule "gist/eksempler/test_tagger"]
+	path = gist/eksempler/test_tagger
+	url = https://gist.github.com/f67da27fe39b16a9e745.git
+[submodule "gist/eksempler/foerste_html_dokument"]
+	path = gist/eksempler/foerste_html_dokument
+	url = https://gist.github.com/e00efa0e50bfe51e0882.git
