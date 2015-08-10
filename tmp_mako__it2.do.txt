@@ -26,7 +26,9 @@ filmene. Et stort takk rettes derfor til Tom Jarle!
 Dokumentet er bygget opp etter strukturen til kompetansemåla i faget,
 (se avsnitt: ref{section:kompetansemål}), og inneholder teori,
 oppgaver og videoer. Relevante kodeeksempler finnes på
-"`gist.github'":"http://gist.github.com/johanhake" og jsBin.
+"`gist.github'":"http://gist.github.com/johanhake" og jsBin. Du kan
+også laste ner alle kode eksemplene og oppgavene
+"`her`":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true".
 
 Dokumentet er lagd med hjelp
 "`doconce`":"http://hplgit.github.io/doconce/doc/web/index.html".  Et

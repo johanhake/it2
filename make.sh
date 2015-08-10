@@ -23,6 +23,9 @@ doconce replace '\usepackage[a4paper]{geometry}' '\usepackage[a4paper, margin=1i
 pdflatex -shell-escape $TEXDOC
 pdflatex -shell-escape $TEXDOC
 
+cd gist
+zip -r ../kode.zip eksempler oppgaver --exclude */.git
+
 # Add more space before list (no sublist looks strange!)
 #doconce replace '<ul>' '<p>&nbsp;&nbsp;<p><ul>' index.html
 rm -f .*html_file_collection
