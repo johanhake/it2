@@ -246,6 +246,8 @@ egenskaper til hele html siden, for eksempel titel og tegnsett
 "`taggen`":"http://www.w3schools.com/tags/tag_body.asp" inneholder det
 som skall vises på siden.
 
+\pagebreak
+
 __Example: Test tagger.__
 label{example:testtagger}
 
