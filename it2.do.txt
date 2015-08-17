@@ -69,23 +69,23 @@ Navngivelse-DelPåSammeVilkår 3.0 Norge
 ========= Teori =========
 
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
-kompetansemålene i faget. Her finner du bare første delen av
-kurset. De resterende delene innen JavaScript programmering finner du
-på "langslet.com/vgs":"http://langslet.com/vgs".
+kompetansemålene i faget. Her finner du første delen av kurset, en
+kortkurs i html. De resterende delene innen JavaScript programmering
+finner du på "langslet.com/vgs":"http://langslet.com/vgs".
 
 # #if FORMAT in ('html', 'sphinx')
-* ref{section:teori:multimedieutvikling}
+#* ref{section:teori:multimedieutvikling}
 #* ref{section:teori:programmering}
 #* ref{section:teori:planlegging}
 # #else
-* Multimedieutvikling, se avsnitt ref{section:teori:multimedieutvikling}
+#* Multimedieutvikling, se avsnitt ref{section:teori:multimedieutvikling}
 #* Programmering, se avsnitt ref{section:teori:programmering}
 #* Planlegging og dokumentasjon, se avsnitt ref{section:teori:planlegging}
 # #endif
 
-!split
+# #!split
 
-======= Multimedieutvikling =======
+======= Kortkurs i utvikling av HTML =======
 label{section:teori:multimedieutvikling}
 
 ===== Editor og filbehandling =====

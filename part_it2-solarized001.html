@@ -81,7 +81,7 @@ div { text-align: justify; text-justify: inter-word; }
 {'highest level': 0,
  'sections': [(u'Forord', 0, u'section:forord', u'section:forord'),
               (u'Teori', 0, None, '___sec1'),
-              (u'Multimedieutvikling',
+              (u'Kortkurs i utvikling av HTML',
                1,
                u'section:teori:multimedieutvikling',
                u'section:teori:multimedieutvikling'),
@@ -175,16 +175,117 @@ end of tocinfo -->
 
 <p>
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
-kompetansemålene i faget. Her finner du bare første delen av
-kurset. De resterende delene innen JavaScript programmering finner du
-på <a href="http://langslet.com/vgs" target="_self">langslet.com/vgs</a>.
+kompetansemålene i faget. Her finner du første delen av kurset, en
+kortkurs i html. De resterende delene innen JavaScript programmering
+finner du på <a href="http://langslet.com/vgs" target="_self">langslet.com/vgs</a>.
 
-<ul>
-<li> <a href="part_it2-solarized002.html#section:teori:multimedieutvikling">Multimedieutvikling</a>
-<!-- * <a href="part_it2-solarized007.html#section:teori:programmering">section:teori:programmering</a> -->
-<!-- * <a href="part_it2-solarized008.html#section:teori:planlegging">section:teori:planlegging</a> --></li>
-</ul>
+<p>
+<!-- * <a href="#section:teori:multimedieutvikling">Kortkurs i utvikling av HTML</a> -->
+<!-- * <a href="part_it2-solarized006.html#section:teori:programmering">section:teori:programmering</a> -->
+<!-- * <a href="part_it2-solarized007.html#section:teori:planlegging">section:teori:planlegging</a> -->
 
+<p>
+<!-- #!split -->
+
+<h1 id="section:teori:multimedieutvikling">Kortkurs i utvikling av HTML</h1>
+
+<h2 id="section:teori:editorogfilbehandling">Editor og filbehandling</h2>
+
+<p>
+Gode verktøy er helt avgjørende uansett hva slags jobb vi skal
+gjøre. Dette gjelder også når vi skal programmere. I denne boka
+skal vi benytte oss av to typer verktøy.
+
+<p>
+
+<dl>
+<dt>Nettleser:<dd> 
+  Program der koden kjøres og skjermbildet vises
+<dt>Editor:<dd> 
+  Her skrives og editeres programkoden 
+</dl>
+
+<b>Nettlesere.</b>
+
+<p>
+De fleste moderne nettlesere fungerer veldig bra som støtteverktøy
+til programmering. De har de funksjoner og verktøy som trengs for å
+jobbe med HTML-programmering på en effektiv og god måte. De mest
+brukte nettleserne i dag er Chrome, FireFox, Internet Explorer, Opera
+og Safari.
+
+<p>
+<b>Editor.</b>
+
+<p>
+Det finnes veldig mange gode editorer for programmering. De mest
+avanserte er store programmeringsmijø, eller
+<a href="http://en.wikipedia.org/wiki/Integrated_development_environment" target="_self">IDE'er</a>
+som de også kalles. I dette kurset kommer vi langt med noe enklere
+editorer, som allikevel er veldig kraftige og funksjonsrike.
+
+<p>
+<center> <!-- figure -->
+<hr class="figure">
+<center><p class="caption">Figure 1:  Et lite ekesmpel på hvordan et enkelt HTML-dokument kan se ut. </p></center>
+<p><img src="figures/editor_sublime_eksempel.png" align="bottom" ></p>
+</center>
+
+<p>
+Til dette kurset anbefaler jeg at dere bruker
+<a href="https://notepad-plus-plus.org" target="_self">notepad++</a> eller <a href="http://www.sublimetext.com/3" target="_self">Sublime Text
+3</a>. Disse er enkle, men allikevel
+kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
+flere filer samtidig. De har også god støtte for automatiske
+kodeforslag og fargelegging av kode slik at lesing går lettere.
+
+<p>
+<b>Før vi lager vårt første html-side.</b>
+
+<p>
+Nå er vi straks klare til å sette i gang med det som er gøy, men
+før det må vi ha noen få ting på plass...
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Før vi lager vårt første html-side må vi...</b>
+<p>
+
+<ol>
+<li> Lag en mappe som skal inneholde filene du lager. (Hvert program skal ha sin egen mappe).</li>
+<li> Lag et nytt html-dokument som inneholder koden under. (Se under for startkoder).</li>
+</ol>
+</div>
+
+
+<p>
+<b>Example: Kom igang med editorn.</b>
+<div id="example:komigang"></div>
+
+<p>
+<div class="alert alert-block alert-notice alert-text-normal">
+<b>Programkoden som du kan bruke i et HTML-dokument for å komme i gang.</b>
+<p>
+<!-- begin verbatim block  html-->
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;nb&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Mitt første HTML-dokument&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Dette er en overskrift.&lt;/h1&gt; 
+	&lt;p&gt;Dette er en paragraf, og denne teksten ser litt annerledes 
+          ut enn en overskrift&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<!-- end verbatim block -->
+</div>
+
+
+<p>
 <p>
 <!-- begin bottom navigation -->
 <table style="width: 100%"><tr><td>
