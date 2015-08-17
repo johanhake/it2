@@ -771,11 +771,10 @@ måter ved hjelp av CSS. I koden under ser du hvordan man endrer
 utseendet til diven med `id` "minBoks" og class "divheading" ved hjelp
 av CSS-koder.
 
-!bnotice Her er utseende til nettsiden bestemt av kodene i stilarket. 
+!bnotice Her er utseende til nettsiden bestemt av kodene i stilarket `stilark.css`. 
 
-Her vises hele filen `stilark.css`. Merk den noe forskjellige
- syntaksen på `class`, som bruker `.` mellom element navnet og klasse
- navnet, og `id` som bruker skigard (hastag) `#`. Med class
+Merk den noe forskjellige syntaksen på `class`, som bruker `.` mellom
+ element navnet og klasse navnet, og `id` som bruker `#`.
 
 !bc css
 #minDiv{
