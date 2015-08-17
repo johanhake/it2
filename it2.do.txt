@@ -27,17 +27,17 @@ label{section:forord}
 
 Dette er en ressurs for elever og lærere som ønsker å bruke
 javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
-nettstedet/boka har betastatus, og innhold vil fylles på og endres
-fortløpende. Dokumentet er basert på en WordPress
+nettstedet har betastatus, og innhold vil fylles på og endres
+fortløpende. Dokumentet er basert på første delen av en
 "`versjon`":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
 Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
-filmene. Et stort takk rettes derfor til Tom Jarle!
+filmene, som vi kommer bruker i dette kurset. Et stort takk rettes
+derfor til Tom Jarle!
 
-Dokumentet er bygget opp etter strukturen til kompetansemåla i faget,
-(se avsnitt: ref{section:kompetansemål_it2}), og inneholder teori,
-oppgaver og videoer. Relevante kodeeksempler finnes på
+Dokumentet dekker bare grundleggende html/CSS bruk men inneholder
+teori, oppgaver og videoer. Relevante kodeeksempler finnes på
 "`gist.github'":"http://gist.github.com/johanhake" og jsBin. Du kan
-også laste ner alle kode eksemplene og oppgavene
+også laste ner alle kode eksemplene
 "`her`":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true".
 
 Dokumentet er lagd med hjelp
@@ -68,16 +68,18 @@ Navngivelse-DelPåSammeVilkår 3.0 Norge
 ========= Teori =========
 
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
-kompetansemålene i faget:
+kompetansemålene i faget. Her finner du bare første delen av
+kurset. De resterende delene om JavaScript finner du
+"`http://langslet.com/vgs`":"langslet.com/vgs".
 
 # #if FORMAT in ('html', 'sphinx')
 * ref{section:teori:multimedieutvikling}
-* ref{section:teori:programmering}
-* ref{section:teori:planlegging}
+#* ref{section:teori:programmering}
+#* ref{section:teori:planlegging}
 # #else
 * Multimedieutvikling, se avsnitt ref{section:teori:multimedieutvikling}
-* Programmering, se avsnitt ref{section:teori:programmering}
-* Planlegging og dokumentasjon, se avsnitt ref{section:teori:planlegging}
+#* Programmering, se avsnitt ref{section:teori:programmering}
+#* Planlegging og dokumentasjon, se avsnitt ref{section:teori:planlegging}
 # #endif
 
 !split
@@ -115,7 +117,7 @@ FIGURE: [figures/editor_sublime_eksempel, frac=0.50] Et lite ekesmpel på hvorda
 
 Til dette kurset anbefaler jeg at dere bruker
 "`notepad++`":"https://notepad-plus-plus.org" eller "`Sublime
-Text`":"http://www.sublimetext.com/2" 2. Disse er enkle, men allikevel
+Text`":"http://www.sublimetext.com/3" 2. Disse er enkle, men allikevel
 kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
 flere filer samtidig. De har også god støtte for automatiske
 kodeforslag og fargelegging av kode slik at lesing går lettere.
@@ -175,7 +177,8 @@ vi vil at siden skal se ut, og i noen grad hva slags funksjonalitet
 den skal ha. I tabellen under finner du noen av de vanligste kodene
 som brukes[^html-tags].
 
-[^html-tags]: For en utfyllende liste se "`http://www.w3schools.com`":"http://www.w3schools.com/tags/ref_byfunc.asp".
+[^html-tags]: For en utfyllende liste se
+"`http://www.w3schools.com`":"http://www.w3schools.com/tags/ref_byfunc.asp".
 
 <%
 col_positions = "|l|l|l|"
@@ -407,7 +410,15 @@ Når en webside lastes skaper nettleseren en Document Object Model
 figur ref{figure:domtree}. DOM er en W3C standard, som definerer
 metoder for å få tilgang på og endre et HTML (eller XML) dokument.
 
+# #if FORMAT in ('html', 'sphinx')
 FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www.w3schools.com`":"http://www.w3schools.com/js/js_htmldom.asp"). label{figure:domtree} 
+# # endif
+
+# #if FORMAT in ('latex', 'pdflatex')
+FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra www.w3schools.com).
+label{figure:domtree}
+# # endif
+
 
 #When a web page is loaded, the browser creates a Document Object Model
 #of the page.  The HTML DOM model is constructed as a tree of Objects:
@@ -416,6 +427,15 @@ FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www
 
 ===== Oppgaver HTML =====
 
+Før dere setter igang med oppgaver kan det være lurt å legge inn
+automagisk start av en html side i sublime-text editorn. 
+
+!bnotice Følg instruksjonene for å legge in automagisk kodegenerering. 
+
+MOVIE: [http://www.youtube.com/embed/4wE9O3w-ihc]
+
+!enotice
+
 === Exercise: Hallo verden. ===
 label{exercise:halloverden}
 
@@ -423,14 +443,20 @@ label{exercise:halloverden}
 en vanlig måte å teste ut ny teknologi på. I denne oppgaven skal du
 lage ditt første html-hallo-verden-program.
 
+# #if FORMAT in ('html', 'sphinx')
 FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra "`flickr`":"https://www.flickr.com/photos/34547181@N00/15573740578"
+# # endif
+
+# #if FORMAT in ('latex', 'pdflatex')
+FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra flickr.
+# # endif
 
 Du skal lage siden `index.html`, som lagres i en egen mappe. Her skal
 du bruke så mye av det du har lært fra første avsnittet. Tittelen på
 siden skal være "Hallo verden!". Innholdet bestemmer du selv. Husk å
 lage oppgaven i en egen mappe.
 
-Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+# Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
 
 === Exercise: Ostekake. === 
 label{exercise:ostekake}
@@ -441,7 +467,7 @@ når du åpner den i en nettleser.
 
 FIGURE: [figures/ostekake,frac=0.75]
 
-Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+# Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
 
 Bilden i oppgaven:
 "`http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg`":"http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg"
@@ -455,8 +481,8 @@ Oppgaven er lisensiert under en "`Creative Commons Navngivelse-DelPåSammeVilkå
 
 Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
 
-!bsol
-!bblock 
+!bsol 
+!bblock `ostekake/index.html`
 !bc html
 
 # #include "loesninger/ostekake/index.html"
@@ -477,7 +503,7 @@ navn "bilder".
 FIGURE: [figures/mintimeplan,frac=0.50]
 
 !bsol
-!bblock 
+!bblock `timeplan/timeplan.html`
 !bc html
 
 # #include "loesninger/timeplan/timeplan.html"
@@ -491,16 +517,192 @@ FIGURE: [figures/mintimeplan,frac=0.50]
 ===== CSS =====
 label{section:teori:css} 
 
+_Cascading Style Sheets_ (CSS, gjennomgående stilark) er et språk
+som brukes til å definere utseende på filer skrevet i
+HTML. Prinsippet er at HTML-dokumentet utelukkende skal beskrive
+struktur og "`semantikk`":"http://no.wikipedia.org/wiki/Semantikk",
+mens oppsett, farger og annen stilinformasjon skal beskrives ved hjelp
+av CSS. Stilinformasjonen kan integreres i selve dokumentet eller
+skilles ut som en egen fil med endelsen .css. Et ubegrenset antall
+dokumenter kan peke til og styres av samme .css-fil, noe som er
+styrken i CSS: Ved å endre på en fil, kan man endre fargebruk,
+bakgrunnsbilder osv. i alle dokumenter som peker til CSS-filen. (Fra
+"`Wikipediaartikkel om
+CSS`":"http://no.wikipedia.org/wiki/Cascading_Style_Sheets")
+
+Når man skal endre mye på utseendet til en HTML-side er CSS et
+fantastisk verktøy. Man kan endre på utseende til innholdet direkte
+i HTML-fila ved å bruke attributter, men HTML-dokumentet blir fort
+komplisert og uoversiktelig når man koder utseendet her. Ved å
+skille ut alt som har med utseende og design i et eget CSS-dokument
+kan man på en ryddig måte få HTML-siden til å se ut slik man selv
+vil.  !split
+
+=== Stilarket ===
+
+Når man lager et eksternt CSS-dokument, eller stilark som det også
+kalles, gjøres dette ved å lenke til stilarket fra
+HTML-dokumentet. Se bildet under.
+
+!bnotice Koden for å knytte CSS-filen til HTML-filen legges i head-taggen
+!bc html
+<head>
+    <meta charset="UTF-8">
+    <link> rel="stylesheet" type="text/css" href="stilark.css">
+    <title>Diveksempel</title>
+</head>
+!ec
+!enotice 
+
+For at stilarket skal vite hvor de ulike stilene skal gjelde kan man
+gi enkeltelementer en egen id, slik at man enkelt kan nå disse fra
+stilarket. I bildet under har en div fått "minBoks" som id.
+
+!bnotice En div med id-attributt som for å knytte den til CSS-fila.
+!bc html
+<div id="minBoks">
+    <h1>Jeg ligger i en div!</h1>
+</div>
+!ec
+!enotice
+
+Man kan ganske enkelt får en div til å se ut på mange forskjellige
+måter ved hjelp av CSS. I bildet under ser du hvordan man endrer
+utseendet til diven med id "minBoks" ved hjelp av CSS-koder.
+
+!bnotice Her er utseende til nettsiden bestemt av kodene i stilarket. Her vises hele filen "stilark.css"
+!bc html
+#minDiv{
+ text-align: center;
+	width: 200px;
+	height: 75px;
+	background-color: #aa5555;
+	border-color: brown;
+	border-width: 6px;
+	border-style: solid;
+	border-radius: 0px 40px;
+	box-shadow: 10px 10px 5px #888888;
+}
+!ec
+!enotice
+
+# NB! Legg inn bra eksempel på å tweaka utseendet på ulike element! (ikke div igen!!)
+# Bruk class!!
+
+Det finnes en mengde CSS-kommandoer, og det anbefales å slå opp for
+å finnes informasjon om det man ønsker. Et fint sted kan være
+referanselisten til "`W3Schools`":"http://www.w3schools.com/cssref/"
+
 !split
 
-======= Programmering =======
-label{section:teori:programmering}
+===== Oppgaver CSS =====
+
+=== Exercise: Zlatan Ibrahimovic. ===
+label{exercise:elgisolnedgang}
+
+FIGURE: [figures/Zlatan-Ibrahimovic-Goals,width=500px]
+
+Zlatan Ibrahimovic er en kjend fotbollsspiller fra Malmö.
+
+Din oppgave er å lage en nettside der du skriver litt om denne
+fantastiske fotbollspiller. Finn ihvertfall to ting om honom på
+nettet som du skriver og bruk link til kildene. Bruk også bilden i
+oppgaveteksten men skaler ner den til 480x300 px. Ha med to
+overskriftshierarkier som begge skall typsettes. Typsettingen skal
+lagres i et eget stilark.
+
+=== Exercise: Timeplanen V2.0 ===
+label{exercise:timeplan2}
+
+Det er skolestart, og du skal lage en timeplan i html. Lag timeplanen
+på bildet under. Bildet kan du hente fra
+"`commons.wikimedia.org`":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
+å lagre oppgaven i egen mappe. Legg også bildet i en egen mappe med
+navn "bilder". I versjon 2 skal du nå lage fargekoder og leke deg med
+rammer på tabellen. La hvert fag få egen bakgrunnsfarge, og lag
+tykkere ramme på tabellen.
+
+FIGURE: [figures/mintimeplan,frac=0.50]
+
+!bsol
+
+!bblock `timeplan2/timeplan.html`
+!bc html
+
+# #include "loesninger/timeplan/timeplan2.html"
+
+!ec
+!eblock 
+
+!bblock `timeplan/stilark.css`
+!bc css
+
+# #include "loesninger/timeplan/stilark.css"
+!ec
+!eblock 
+!esol
+
+=== Exercise: McBergbys ===
+label{exercise:timeplan2}
+
+FIGURE: [figures/mcbergbys,frac=0.50]
+
+Hurtigmatkjeden McBergbys ønsker å utvikle et bestillingssystem som
+kundene kan bruke mens de venter på å bestille mat i restauranten og
+i drive-in. Dette gjør at kjøkkenet får beskjed om hva som skal
+lages av mat får kundene kommer til kassa, og dermed kan begynne på
+bestillingen tidligere. Slik avvikles køen raskere.
+
+Du skal lage nettsiden index.html, slik at den blir slik du ser på
+bildet. 
+
+* Bildet skal lagres i en egen mappe som har navnet bilder. 
+* Hele oppgaven skal lagres i en egen mappe. 
+* Fargen er valgfri.
+* Bruk et eget `stilark.css` for å kontrollere utseendet på siden.
+
+Når vi setter igang med JavaScript kan vi behandle hva som skal skje
+når kunden sender bestillingen.
+
+!bhint
+* Bruk `<div>` elementet for å ramme inn siden og menyvelgeren.
+!ehint
+
+!bhint 
+* Bruk `width`, `padding`, `border` og `border-radius` til å kontrollere utseendet til `div` elementene.
+!ehint
+
+!bhint 
+* Bruk et `div` element for å gi plass mellom ulike `div` element.
+!ehint
+
+!bsol
+!bblock `mcbergbys/index.html`
+!bc html
+
+# #include "loesninger/mcbergbys/index.html"
+
+!ec
+!eblock 
+
+!bblock `mcbergbys/stilark.css`
+!bc css
+
+# #include "loesninger/mcbergbys/stilark.css"
+!ec
+!eblock 
+!esol
 
 !split
-======= Planlegging og dokumentasjon =======
-label{section:teori:planlegging}
- 
-!split
+
+#======= Programmering =======
+#label{section:teori:programmering}
+#
+#!split
+#======= Planlegging og dokumentasjon =======
+#label{section:teori:planlegging}
+# 
+#!split
 
 # #if FORMAT in ('latex', 'pdflatex')
 \pagebreak
