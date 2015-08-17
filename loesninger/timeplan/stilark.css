@@ -1,0 +1,56 @@
+td, tr{
+    border: 2px solid black;
+}
+
+table {
+    background-color: LightYellow;
+    border: 4px solid black;
+}
+
+td.matematikk {
+    background-color: Red;
+}
+
+td.kontakt {
+    background-color: #FBB917;
+}
+
+td.fritimme {
+    background-color: #6960EC;
+}
+
+td.norsk {
+    background-color: Green;
+}
+
+td.it2 {
+    background-color: Blue;
+}
+
+td.historie {
+    background-color: Maroon;
+}
+
+td.kjemi {
+    background-color: Pink;
+}
+
+td.fysikk {
+    background-color: Purple;
+}
+
+td.fagdag {
+    background-color: Lime;
+}
+
+td.rle {
+    background-color: Olive;
+}
+
+td.samfunnsfag {
+    background-color: LightBlue;
+}
+
+td.kroppsoving {
+    background-color: LightGreen;
+}
