@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-TITLE: Liten JavaScript kurs rettet mot IT2
+TITLE: Kortkurs i HTML, som bakgrunn for JavaScript i IT2
 AUTHOR: Johan Hake Email:johan.hake@gmail.com
 DATE: today
 
@@ -35,10 +35,11 @@ filmene, som vi kommer bruker i dette kurset. Et stort takk rettes
 derfor til Tom Jarle!
 
 Dokumentet dekker bare grundleggende html/CSS bruk men inneholder
-teori, oppgaver og videoer. Relevante kodeeksempler finnes på
+teori, oppgaver og video. Relevante kodeeksempler finnes på
 "`gist.github'":"http://gist.github.com/johanhake" og jsBin. Du kan
-også laste ner alle kode eksemplene
-"`her`":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true".
+også laste ner alle kode-eksemplene
+"`her`":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true". Forslag
+på løsninger på noen oppgaver finnes sist i "it2.pdf": "it2.pdf".
 
 Dokumentet er lagd med hjelp
 "`doconce`":"http://hplgit.github.io/doconce/doc/web/index.html".  Et
