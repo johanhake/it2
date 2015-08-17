@@ -3,10 +3,10 @@ TEXDOC=$DOCNAME.tex
 BOOTWATCHSTYLE=journal # Check out https://bootswatch.com
 
 # Compile it2 document using bootstrap theme
-doconce format html $DOCNAME --html_style=bootswatch_$BOOTWATCHSTYLE --html_admon=bootstrap_panel --html_bootstrap_jumbotron=off --html_bootstrap_navbar=on --encoding=utf-8 --pygments_html_linenos --html_toc_depth=3  --without_solutions
+doconce format html $DOCNAME --html_style=bootswatch_$BOOTWATCHSTYLE --html_admon=bootstrap_panel --html_bootstrap_jumbotron=off --html_bootstrap_navbar=on --encoding=utf-8 --pygments_html_linenos --html_toc_depth=3  --without_solutions --html_output=index
 doconce replace '<a href="laereplan_it.pdf" target="_self">PDF versjon av dette dokumentet (for printing)</a>' '<a href="laereplan_it/laereplan_it.pdf" target="_self">PDF versjon av dette dokumentet (for printing)</a>' $DOCNAME.html
 
-doconce split_html $DOCNAME
+doconce split_html index
 doconce extract_exercises tmp_mako__$DOCNAME.do.txt
 
 # Compile it2 document using solarized theme
