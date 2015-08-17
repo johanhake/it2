@@ -29,22 +29,22 @@ Dette er en ressurs for elever og lærere som ønsker å bruke
 javascript/HTML/CSS som programmeringsspråk i IT2-undervisningen. Hele
 nettstedet har betastatus, og innhold vil fylles på og endres
 fortløpende. Dokumentet er basert på første delen av en
-"`versjon`":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
+"versjon":"http://www.fuzzbin.org/IT2" utarbeidet av Tom Jarle
 Christiansen. Han har også lagd de fleste av kodeeksemplene og youtube
 filmene, som vi kommer bruker i dette kurset. Et stort takk rettes
 derfor til Tom Jarle!
 
 Dokumentet dekker bare grundleggende html/CSS bruk men inneholder
 teori, oppgaver og video. Relevante kodeeksempler finnes på
-"`gist.github'":"http://gist.github.com/johanhake" og jsBin. Du kan
+"gist.github":"http://gist.github.com/johanhake" og jsBin. Du kan
 også laste ner alle kode-eksemplene
-"`her`":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true". Forslag
+"her":"https://github.com/johanhake/it2/blob/master/kode.zip?raw=true". Forslag
 på løsninger på noen oppgaver finnes sist i "it2.pdf": "it2.pdf".
 
 Dokumentet er lagd med hjelp
-"`doconce`":"http://hplgit.github.io/doconce/doc/web/index.html".  Et
+"doconce":"http://hplgit.github.io/doconce/doc/web/index.html".  Et
 stort takk rettes til visjonæren Hans Petter
-"`Langtangen`":"http://hplgit.github.io/homepage/index.html" som har
+"Langtangen":"http://hplgit.github.io/homepage/index.html" som har
 utarbeidet dette verktøy.
 
 #Bli gjerne med i nettverket for lærere som er interessert i IT2 med
@@ -54,11 +54,11 @@ Du står helt fritt til å bruke innholdet du finner i dette dokumentet
 slik du selv måtte ønske, så lenge du deler videre med vilkårene
 under. 
 
-"`Johan Hake`":"mailto:johan.hake@gmail.com", August 2015
+"Johan Hake":"mailto:johan.hake@gmail.com", August 2015
 
 Dette verk er lisensieret under en Creative Commons
 Navngivelse-DelPåSammeVilkår 3.0 Norge
-"`lisens`":"http://creativecommons.org/licenses/by-sa/3.0/no/".
+"lisens":"http://creativecommons.org/licenses/by-sa/3.0/no/".
 
 !split
 
@@ -70,8 +70,8 @@ Navngivelse-DelPåSammeVilkår 3.0 Norge
 
 Den grunnleggende teorin i faget er delt opp i avsnitt som tilsvarer
 kompetansemålene i faget. Her finner du bare første delen av
-kurset. De resterende delene om JavaScript finner du
-"`http://langslet.com/vgs`":"langslet.com/vgs".
+kurset. De resterende delene innen JavaScript programmering finner du
+på "langslet.com/vgs":"http://langslet.com/vgs".
 
 # #if FORMAT in ('html', 'sphinx')
 * ref{section:teori:multimedieutvikling}
@@ -110,15 +110,15 @@ __Editor.__
 
 Det finnes veldig mange gode editorer for programmering. De mest
 avanserte er store programmeringsmijø, eller
-"`IDE'er`":"http://en.wikipedia.org/wiki/Integrated_development_environment"
+"IDE'er":"http://en.wikipedia.org/wiki/Integrated_development_environment"
 som de også kalles. I dette kurset kommer vi langt med noe enklere
 editorer, som allikevel er veldig kraftige og funksjonsrike.
 
 FIGURE: [figures/editor_sublime_eksempel, frac=0.50] Et lite ekesmpel på hvordan et enkelt HTML-dokument kan se ut.
 
 Til dette kurset anbefaler jeg at dere bruker
-"`notepad++`":"https://notepad-plus-plus.org" eller "`Sublime
-Text`":"http://www.sublimetext.com/3" 2. Disse er enkle, men allikevel
+"notepad++":"https://notepad-plus-plus.org" eller "Sublime Text
+3":"http://www.sublimetext.com/3". Disse er enkle, men allikevel
 kraftige kodeeditorer der man enkelt og oversiktlig kan jobbe med
 flere filer samtidig. De har også god støtte for automatiske
 kodeforslag og fargelegging av kode slik at lesing går lettere.
@@ -149,27 +149,27 @@ label{example:komigang}
 label{section:teori:html} 
 
 _HyperText Markup Language_ (HTML, hypertekstmarkeringsspråk) er et
-"`markeringsspråk`":"http://no.wikipedia.org/wiki/Markeringsspråk" for
-formatering av "`nettsider`":"http://no.wikipedia.org/wiki/Nettside"
-med "`hypertekst'":"http://no.wikipedia.org/wiki/Hypertekst" og annen
+"markeringsspråk":"http://no.wikipedia.org/wiki/Markeringsspråk" for
+formatering av "nettsider":"http://no.wikipedia.org/wiki/Nettside"
+med "hypertekst":"http://no.wikipedia.org/wiki/Hypertekst" og annen
 informasjon som kan vises i en
-"`nettleser`":"http://no.wikipedia.org/wiki/Nettleser". HTML benyttes
+"nettleser":"http://no.wikipedia.org/wiki/Nettleser". HTML benyttes
 til å strukturere informasjon - angi noe tekst som overskrifter,
 avsnitt, lister og så videre - og kan, i en viss grad, brukes til å
 beskrive utseende og semantikk i et dokument.
 
-HTML ble opprinnelig definert i 1989 av "`Tim
-Berners-Lee`":"https://no.wikipedia.org/wiki/Tim_Berners-Lee" og
-"`Robert Caillau`":"https://en.wikipedia.org/wiki/Robert_Cailliau" og
-videreutviklet av "`IETF`":"http://no.wikipedia.org/wiki/IETF" og er
+HTML ble opprinnelig definert i 1989 av "Tim
+Berners-Lee":"https://no.wikipedia.org/wiki/Tim_Berners-Lee" og
+"Robert Caillau":"https://en.wikipedia.org/wiki/Robert_Cailliau" og
+videreutviklet av "IETF":"http://no.wikipedia.org/wiki/IETF" og er
 nå en internasjonal standard
-("`ISO`":"http://no.wikipedia.org/wiki/International_Organization_for_Standardization"/"`IEC`":"http://no.wikipedia.org/wiki/International_Electrotechnical_Commission"
+("ISO":"http://no.wikipedia.org/wiki/International_Organization_for_Standardization"/"`IEC`":"http://no.wikipedia.org/wiki/International_Electrotechnical_Commission"
 15445:2000). Siden har HTML-spesifikasjonene blitt opprettholdt av
-"`World Wide Web
-Consortium`":"http://no.wikipedia.org/wiki/World_Wide_Web_Consortium"
+"World Wide Web
+Consortium":"http://no.wikipedia.org/wiki/World_Wide_Web_Consortium"
 (W3C)[^html]. 
 
-[^html]: Hentet fra wikipediaartikkelen om "`HTML`":"http://no.wikipedia.org/wiki/HTML".
+[^html]: Hentet fra wikipediaartikkelen om "HTML":"http://no.wikipedia.org/wiki/HTML".
 
 __Programmering i HTML.__
 
@@ -179,7 +179,7 @@ den skal ha. I tabellen under finner du noen av de vanligste kodene
 som brukes[^html-tags].
 
 [^html-tags]: For en utfyllende liste se
-"`http://www.w3schools.com`":"http://www.w3schools.com/tags/ref_byfunc.asp".
+"http://www.w3schools.com":"http://www.w3schools.com/tags/ref_byfunc.asp".
 
 <%
 col_positions = "|l|l|l|"
@@ -228,16 +228,16 @@ nettleser.
 !eblock
 
 Hvert html dokument må ha noen standard tagger som `<!doctype>` og
-`<html>`. "`doctype`":"http://www.w3schools.com/tags/tag_doctype.asp"
+`<html>`. "doctype":"http://www.w3schools.com/tags/tag_doctype.asp"
 taggen sier til en netleser at det er et html dokument og
-"`html`":"http://www.w3schools.com/tags/tag_html.asp" taggen sier hvor
+"html":"http://www.w3schools.com/tags/tag_html.asp" taggen sier hvor
 selve html koden kommer. Vi ser fra eksempelet at `<html>` taggen har
 en så kallt attributt: `lang="no"`, som er tileggsinformasjon til
 taggen, se nedan. På rad 3-6 defineres `<head>`
-"`taggen`":"http://www.w3schools.com/tags/tag_head.asp", som bestemmer
+"taggen":"http://www.w3schools.com/tags/tag_head.asp", som bestemmer
 egenskaper til hele html siden, for eksempel titel og tegnsett
 (encoding). En html dokument bør også ha en `<body>` tag. Denne
-"`taggen`":"http://www.w3schools.com/tags/tag_body.asp" inneholder det
+"taggen":"http://www.w3schools.com/tags/tag_body.asp" inneholder det
 som skall vises på siden.
 
 # #if FORMAT in ('latex', 'pdflatex')
@@ -357,8 +357,8 @@ label{example:testinput}
 
 __taggene video og audio.__ 
 
-"`Video`":"http://www.w3schools.com/tags/tag_video.asp" og
-"`audio`":"http://www.w3schools.com/tags/tag_audio.asp"-taggene er
+"Video":"http://www.w3schools.com/tags/tag_video.asp" og
+"audio":"http://www.w3schools.com/tags/tag_audio.asp"-taggene er
 brukes når man skal spille av film og lyd. Flere formater støttes, og
 man har mulighet for volum og avspillingskontroll.
 
@@ -401,7 +401,7 @@ FIGURE: [figures/jeg_ligger_i_en_div,frac=0.50]
 
 Det finnes så mange html-tagger og ulike attributter at de færreste
 husker alle selv. Det er derfor viktig å lære seg å slå
-opp. "`W3schools.com`":"http://W3schools.com" er et nettsted der du
+opp. "W3schools.com":"http://W3schools.com" er et nettsted der du
 selv kan finne tagger, og se eksempler på hvordan de brukes.
 
 __DOM treet.__
@@ -412,7 +412,7 @@ figur ref{figure:domtree}. DOM er en W3C standard, som definerer
 metoder for å få tilgang på og endre et HTML (eller XML) dokument.
 
 # #if FORMAT in ('html', 'sphinx')
-FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "`www.w3schools.com`":"http://www.w3schools.com/js/js_htmldom.asp"). label{figure:domtree} 
+FIGURE: [figures/pic_htmltree.gif] Et HTML DOM tre av objekter (hentet fra "www.w3schools.com":"http://www.w3schools.com/js/js_htmldom.asp"). label{figure:domtree} 
 # # endif
 
 # #if FORMAT in ('latex', 'pdflatex')
@@ -440,12 +440,12 @@ MOVIE: [http://www.youtube.com/embed/4wE9O3w-ihc]
 === Exercise: Hallo verden. ===
 label{exercise:halloverden}
 
-"`Hallo verden`":"http://en.wikipedia.org/wiki/Hello_world_program" er
+"Hallo verden":"http://en.wikipedia.org/wiki/Hello_world_program" er
 en vanlig måte å teste ut ny teknologi på. I denne oppgaven skal du
 lage ditt første html-hallo-verden-program.
 
 # #if FORMAT in ('html', 'sphinx')
-FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra "`flickr`":"https://www.flickr.com/photos/34547181@N00/15573740578"
+FIGURE: [figures/hello_world,frac=0.50] Hello world! Hentet fra "flickr":"https://www.flickr.com/photos/34547181@N00/15573740578"
 # # endif
 
 # #if FORMAT in ('latex', 'pdflatex')
@@ -457,7 +457,7 @@ du bruke så mye av det du har lært fra første avsnittet. Tittelen på
 siden skal være "Hallo verden!". Innholdet bestemmer du selv. Husk å
 lage oppgaven i en egen mappe.
 
-# Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+# Denne oppgaven er laget av "fuzzbin":"https://github.com/fuzzbin".
 
 === Exercise: Ostekake. === 
 label{exercise:ostekake}
@@ -468,16 +468,19 @@ når du åpner den i en nettleser.
 
 FIGURE: [figures/ostekake,frac=0.75]
 
-# Denne oppgaven er laget av "`fuzzbin`":"https://github.com/fuzzbin".
+# Denne oppgaven er laget av "fuzzbin":"https://github.com/fuzzbin".
 
 Bilden i oppgaven:
-"`http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg`":"http://commons.wikimedia.org/wiki/File:Orange_cheesecake.jpg"
+"`Orange_cheesecake.jpg`":"https://upload.wikimedia.org/wikipedia/commons/4/40/Orange_cheesecake.jpg"
 
-Oppgaven er lisensiert under en "`Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens`":"http://creativecommons.org/licenses/by-sa/4.0".
-
+Oppgaven er lisensiert under en "Creative Commons Navngivelse-DelPåSammeVilkår 4.0 Internasjonal lisens":"http://creativecommons.org/licenses/by-sa/4.0".
 
 !bhint
-* Bruk `<div>` elementet for å ramme in reseptet.
+* Bruk attributtet `width` til `img` taggen for å kontrollere størrelsen på bilden.
+!ehint
+
+!bhint
+* Bruk `<div>` elementet for å ramme in reseptet og se på ref{example:Lekmeddiv}.
 !ehint
 
 Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
@@ -497,7 +500,7 @@ label{exercise:timeplanen}
 
 Det er skolestart, og du skal lage en timeplan i html. Lag timeplanen
 på bildet under. Bildet kan du hente fra
-"`commons.wikimedia.org`":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
+"commons.wikimedia.org":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
 å lagre oppgaven i egen mappe. Legg også bildet i en egen mappe med
 navn "bilder".
 
@@ -521,15 +524,15 @@ label{section:teori:css}
 _Cascading Style Sheets_ (CSS, gjennomgående stilark) er et språk
 som brukes til å definere utseende på filer skrevet i
 HTML. Prinsippet er at HTML-dokumentet utelukkende skal beskrive
-struktur og "`semantikk`":"http://no.wikipedia.org/wiki/Semantikk",
+struktur og "semantikk":"http://no.wikipedia.org/wiki/Semantikk",
 mens oppsett, farger og annen stilinformasjon skal beskrives ved hjelp
 av CSS. Stilinformasjonen kan integreres i selve dokumentet eller
 skilles ut som en egen fil med endelsen .css. Et ubegrenset antall
 dokumenter kan peke til og styres av samme .css-fil, noe som er
 styrken i CSS: Ved å endre på en fil, kan man endre fargebruk,
 bakgrunnsbilder osv. i alle dokumenter som peker til CSS-filen. (Fra
-"`Wikipediaartikkel om
-CSS`":"http://no.wikipedia.org/wiki/Cascading_Style_Sheets")
+"Wikipediaartikkel om
+CSS":"http://no.wikipedia.org/wiki/Cascading_Style_Sheets")
 
 Når man skal endre mye på utseendet til en HTML-side er CSS et
 fantastisk verktøy. Man kan endre på utseende til innholdet direkte
@@ -601,7 +604,7 @@ h1.divheading {
 
 Det finnes en mengde CSS-kommandoer, og det anbefales å slå opp for
 å finnes informasjon om det man ønsker. Et fint sted kan være
-referanselisten til "`W3Schools`":"http://www.w3schools.com/cssref/"
+referanselisten til "W3Schools":"http://www.w3schools.com/cssref/"
 
 !split
 
@@ -626,7 +629,7 @@ label{exercise:timeplan2}
 
 Det er skolestart, og du skal lage en timeplan i html. Lag timeplanen
 på bildet under. Bildet kan du hente fra
-"`commons.wikimedia.org`":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
+"commons.wikimedia.org":"http://commons.wikimedia.org/wiki/File:Saladeaula_itapevi.jpg". Husk
 å lagre oppgaven i egen mappe. Legg også bildet i en egen mappe med
 navn "bilder". I versjon 2 skal du nå lage fargekoder og leke deg med
 rammer på tabellen. La hvert fag få egen bakgrunnsfarge, og lag
