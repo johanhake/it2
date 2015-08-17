@@ -218,16 +218,19 @@ HTML-dokumentet. Se bildet under.
 
 <p>
 For at stilarket skal vite hvor de ulike stilene skal gjelde kan man
-gi enkeltelementer en egen id, slik at man enkelt kan nå disse fra
-stilarket. I bildet under har en div fått "minBoks" som id.
+gi enkeltelementer en egen <code>id</code>, slik at man enkelt kan nå disse fra
+stilarket. I bildet under har en div fått "minBoks" som <code>id</code>
+attributt. Skall man sette samme stil på mange elementer kan man bruke
+<code>class</code> attributten.
 
 <p>
 <div class="alert alert-block alert-notice alert-text-normal">
-<b>En div med id-attributt som for å knytte den til CSS-fila.</b>
+<b>En <code>div</code> med id-attributt og <code>h1</code> med <code>class</code> attributt som for å knytte den til CSS-fila.</b>
 <p>
 <!-- begin verbatim block  html-->
 <pre><code>&lt;div id=&quot;minBoks&quot;&gt;
-    &lt;h1&gt;Jeg ligger i en div!&lt;/h1&gt;
+    &lt;h1 class=&quot;divheading&quot;&gt;Jeg ligger i en div!&lt;/h1&gt;
+    &lt;h1 class=&quot;divheading&quot;&gt;Jeg ligger og i en div!!&lt;/h1&gt;
 &lt;/div&gt;
 </code></pre>
 <!-- end verbatim block -->
@@ -235,19 +238,27 @@ stilarket. I bildet under har en div fått "minBoks" som id.
 
 
 <p>
-Man kan ganske enkelt får en div til å se ut på mange forskjellige
-måter ved hjelp av CSS. I bildet under ser du hvordan man endrer
-utseendet til diven med id "minBoks" ved hjelp av CSS-koder.
+Man kan ganske enkelt få en div til å se ut på mange forskjellige
+måter ved hjelp av CSS. I koden under ser du hvordan man endrer
+utseendet til diven med <code>id</code> "minBoks" og class "divheading" ved hjelp
+av CSS-koder.
 
 <p>
 <div class="alert alert-block alert-notice alert-text-normal">
-<b>Her er utseende til nettsiden bestemt av kodene i stilarket. Her vises hele filen "stilark.css".</b>
+<b>Her er utseende til nettsiden bestemt av kodene i stilarket.</b>
 <p>
-<!-- begin verbatim block  html-->
+
+<p>
+Her vises hele filen <code>stilark.css</code>. Merk den noe forskjellige
+ syntaksen på <code>class</code>, som bruker <code>.</code> mellom element navnet og klasse
+ navnet, og <code>id</code> som bruker skigard (hastag) <code>#</code>. Med class
+
+<p>
+<!-- begin verbatim block  css-->
 <pre><code>#minDiv{
  text-align: center;
 	width: 200px;
-	height: 75px;
+	height: 150px;
 	background-color: #aa5555;
 	border-color: brown;
 	border-width: 6px;
@@ -255,14 +266,14 @@ utseendet til diven med id "minBoks" ved hjelp av CSS-koder.
 	border-radius: 0px 40px;
 	box-shadow: 10px 10px 5px #888888;
 }
+
+h1.divheading {
+  color: Green;
+}
 </code></pre>
 <!-- end verbatim block -->
 </div>
 
-
-<p>
-<!-- NB! Legg inn bra eksempel på å tweaka utseendet på ulike element! (ikke div igen!!) -->
-<!-- Bruk class!! -->
 
 <p>
 Det finnes en mengde CSS-kommandoer, og det anbefales å slå opp for

@@ -555,27 +555,36 @@ HTML-dokumentet. Se bildet under.
 !enotice 
 
 For at stilarket skal vite hvor de ulike stilene skal gjelde kan man
-gi enkeltelementer en egen id, slik at man enkelt kan nå disse fra
-stilarket. I bildet under har en div fått "minBoks" som id.
+gi enkeltelementer en egen `id`, slik at man enkelt kan nå disse fra
+stilarket. I bildet under har en div fått "minBoks" som `id`
+attributt. Skall man sette samme stil på mange elementer kan man bruke
+`class` attributten.
 
-!bnotice En div med id-attributt som for å knytte den til CSS-fila.
+!bnotice En `div` med id-attributt og `h1` med `class` attributt som for å knytte den til CSS-fila.
 !bc html
 <div id="minBoks">
-    <h1>Jeg ligger i en div!</h1>
+    <h1 class="divheading">Jeg ligger i en div!</h1>
+    <h1 class="divheading">Jeg ligger og i en div!!</h1>
 </div>
 !ec
 !enotice
 
-Man kan ganske enkelt får en div til å se ut på mange forskjellige
-måter ved hjelp av CSS. I bildet under ser du hvordan man endrer
-utseendet til diven med id "minBoks" ved hjelp av CSS-koder.
+Man kan ganske enkelt få en div til å se ut på mange forskjellige
+måter ved hjelp av CSS. I koden under ser du hvordan man endrer
+utseendet til diven med `id` "minBoks" og class "divheading" ved hjelp
+av CSS-koder.
 
-!bnotice Her er utseende til nettsiden bestemt av kodene i stilarket. Her vises hele filen "stilark.css"
-!bc html
+!bnotice Her er utseende til nettsiden bestemt av kodene i stilarket. 
+
+Her vises hele filen `stilark.css`. Merk den noe forskjellige
+ syntaksen på `class`, som bruker `.` mellom element navnet og klasse
+ navnet, og `id` som bruker skigard (hastag) `#`. Med class
+
+!bc css
 #minDiv{
  text-align: center;
 	width: 200px;
-	height: 75px;
+	height: 150px;
 	background-color: #aa5555;
 	border-color: brown;
 	border-width: 6px;
@@ -583,11 +592,12 @@ utseendet til diven med id "minBoks" ved hjelp av CSS-koder.
 	border-radius: 0px 40px;
 	box-shadow: 10px 10px 5px #888888;
 }
+
+h1.divheading {
+  color: Green;
+}
 !ec
 !enotice
-
-# NB! Legg inn bra eksempel på å tweaka utseendet på ulike element! (ikke div igen!!)
-# Bruk class!!
 
 Det finnes en mengde CSS-kommandoer, og det anbefales å slå opp for
 å finnes informasjon om det man ønsker. Et fint sted kan være
