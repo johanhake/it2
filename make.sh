@@ -9,6 +9,11 @@ doconce replace '<a href="laereplan_it.pdf" target="_self">PDF versjon av dette 
 doconce split_html index
 doconce extract_exercises tmp_mako__$DOCNAME.do.txt
 
+for f in $(ls part_index*.html); 
+do 
+    doconce replace '</li></li>' '</li>' $f;
+done
+
 # Compile it2 document using solarized theme
 doconce format html $DOCNAME --html_output=$DOCNAME-solarized --html_style=solarized --encoding=utf-8 --pygments_html_linenos
 doconce split_html $DOCNAME-solarized

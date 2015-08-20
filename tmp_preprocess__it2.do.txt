@@ -80,6 +80,7 @@ def html_table(row_contents, col_postions, col_formats):
             else:
                 line.append(cell_format % cell)
         table_lines.append(r"<tr>%s</tr>" % (r" ".join(row_cell_format % cell for cell in line)))
+
         if i == 0:
             table_lines.extend([r"</thead>", r"<tbody>"])
         elif i == N_rows-1:
@@ -280,7 +281,7 @@ row_contents = [[r"Tag", r"Beskrivelse", ur"Eksempel på bruk"],
    [ur"<img>", u"Sette inn bilde",   u"<img src=\"mittBilde.jpg\">"],
    [ur"<ul> og <li>", u"Punktliste", ur"<ul>\\  <li>Punkt 1</li>\\  <li>Punkt 2</li>\\</ul>"],
    [ur"<ol> og <li>", u"Nummerert liste", ur"<ol>\\  <li>Punkt 1</li>\\  <li>Punkt 2</li>\\</ol>"],
-   [ur"<table>, <tr>\\og <td>", u"Tabell", ur"<table>\\  <tr><td>Celle1</td><td>Celle2</tr>\\  <tr><td>Celle1</td><td>Celle2</tr>\\</table>",]]
+   [ur"<table>, <tr>\\og <td>", u"Tabell", ur"<table>\\  <tr><td>Celle1</td><td>Celle2</td></tr>\\  <tr><td>Celle1</td><td>Celle2</td></tr>\\</table>",]]
 #print tableify(FORMAT, row_contents, col_positions, col_formats)
 %>
 ${tableify(FORMAT, row_contents, col_positions, col_formats)}
@@ -590,6 +591,10 @@ Oppgaven er lisensiert under en "Creative Commons Navngivelse-DelPåSammeVilkår
 * Bruk `<div>` elementet for å ramme in reseptet og se på ref{example:Lekmeddiv}.
 !ehint
 
+!bhint
+* Bruk `style` attributten til `<div>` for å sentrere tekst og bilde.
+!ehint
+
 Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
 
 !bsol 
@@ -617,7 +622,7 @@ Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kod
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Orange_cheesecake.jpg" 
     width="30%">
 
-	<div style="text-align: left;">
+    <div style="text-align: left;">
     <h2>Ingredienser:</h2>
 
     <h3>Bunn:</h3>

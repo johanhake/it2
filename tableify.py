@@ -72,6 +72,7 @@ def html_table(row_contents, col_postions, col_formats):
             else:
                 line.append(cell_format % cell)
         table_lines.append(r"<tr>%s</tr>" % (r" ".join(row_cell_format % cell for cell in line)))
+
         if i == 0:
             table_lines.extend([r"</thead>", r"<tbody>"])
         elif i == N_rows-1:

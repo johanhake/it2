@@ -204,7 +204,7 @@ som brukes[^html-tags].
 \hline
 \texttt{<ol> og <li>} & Nummerert liste & \specialcell[l]{\texttt{<ol>}\\\texttt{  <li>Punkt 1</li>}\\\texttt{  <li>Punkt 2</li>}\\\texttt{</ol>}}\\
 \hline
-\specialcell[l]{\texttt{<table>, <tr>}\\\texttt{og <td>}} & Tabell & \specialcell[l]{\texttt{<table>}\\\texttt{  <tr><td>Celle1</td><td>Celle2</tr>}\\\texttt{  <tr><td>Celle1</td><td>Celle2</tr>}\\\texttt{</table>}}\\
+\specialcell[l]{\texttt{<table>, <tr>}\\\texttt{og <td>}} & Tabell & \specialcell[l]{\texttt{<table>}\\\texttt{  <tr><td>Celle1</td><td>Celle2</td></tr>}\\\texttt{  <tr><td>Celle1</td><td>Celle2</td></tr>}\\\texttt{</table>}}\\
 \hline
 \end{tabular}
 }\renewcommand{\arraystretch}{1.0}
@@ -532,6 +532,10 @@ Oppgaven er lisensiert under en "Creative Commons Navngivelse-DelPåSammeVilkår
 * Bruk `<div>` elementet for å ramme in reseptet og se på ref{example:Lekmeddiv}.
 !ehint
 
+!bhint
+* Bruk `style` attributten til `<div>` for å sentrere tekst og bilde.
+!ehint
+
 Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kode.
 
 !bsol 
@@ -559,7 +563,7 @@ Slike oppgaver kan løses på mange måter. Vi steber etter enkel men lesbar kod
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Orange_cheesecake.jpg" 
     width="30%">
 
-	<div style="text-align: left;">
+    <div style="text-align: left;">
     <h2>Ingredienser:</h2>
 
     <h3>Bunn:</h3>
