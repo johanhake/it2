@@ -1055,7 +1055,7 @@ td.kroppsoving {
 !esol
 
 === Exercise: McBergbys ===
-label{exercise:timeplan2}
+label{exercise:mcbergbys}
 
 FIGURE: [figures/mcbergbys,frac=0.50]
 
